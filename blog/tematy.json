@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "ile-kosztuje-wdrozenie-erp",
+    "tytul": "Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej?",
+    "opis": "Rozbijamy koszty na czynniki pierwsze: licencja, wdrożenie, szkolenia, utrzymanie. I co zrobić, żeby nie przepłacić.",
+    "tagi": ["ERP", "Koszty", "Produkcja", "MŚP"]
+  },
+  {
+    "slug": "excel-vs-dedykowany-system",
+    "tytul": "Excel to nie system — kiedy arkusz kalkulacyjny zaczyna kosztować więcej niż oprogramowanie?",
+    "opis": "Konkretne sygnały, że firma wyrosła z Excela. Błędy, które wynikają z ręcznego zarządzania danymi i ile realnie kosztują.",
+    "tagi": ["Excel", "Automatyzacja", "MŚP", "Zarządzanie"]
+  },
+  {
+    "slug": "ai-agenci-w-firmie-produkcyjnej",
+    "tytul": "AI Agent w firmie produkcyjnej — co to znaczy w praktyce?",
+    "opis": "Bez buzzwordów: jak agenci AI działają w realnym środowisku produkcyjnym, gdzie oszczędzają czas i gdzie jeszcze nie dojrzeli.",
+    "tagi": ["AI", "Automatyzacja", "Produkcja", "Agent AI"]
+  },
+  {
+    "slug": "crm-dla-msp-jak-wybrac",
+    "tytul": "CRM dla MŚP — jak wybrać i czego nie kupować?",
+    "opis": "Porównanie podejść: gotowy SaaS, dedykowane rozwiązanie, modyfikacja open-source. Dla kogo co działa i dlaczego duże systemy często przeszkadzają małym firmom.",
+    "tagi": ["CRM", "MŚP", "Wybór systemu"]
+  },
+  {
+    "slug": "integracja-systemow-bez-bolu",
+    "tytul": "Integracja systemów bez bólu głowy — jak połączyć to, co już masz?",
+    "opis": "Firma ma ERP, CRM i 4 inne narzędzia, które nie rozmawiają ze sobą. Co zrobić zanim kupisz nowy system — praktyczny przewodnik.",
+    "tagi": ["Integracje", "API", "Automatyzacja", "MŚP"]
+  },
+  {
+    "slug": "kiedy-wdrozenie-sie-nie-oplaca",
+    "tytul": "Kiedy wdrożenie oprogramowania się NIE opłaca — uczciwa lista",
+    "opis": "Przypadki, kiedy lepiej poczekać, uprościć proces albo kupić gotowy SaaS zamiast zamawiać dedykowany system.",
+    "tagi": ["Wdrożenie", "ROI", "MŚP", "Decyzje"]
+  },
+  {
+    "slug": "automatyzacja-faktury-zamowienia",
+    "tytul": "Automatyzacja faktur i zamówień — gdzie zaczyna się zwrot z inwestycji?",
+    "opis": "Prosty rachunek: ile godzin tygodniowo pochłania ręczne wystawianie faktur i wpisywanie zamówień. I kiedy automatyzacja się zwraca.",
+    "tagi": ["Automatyzacja", "Faktury", "ROI", "MŚP"]
+  },
+  {
+    "slug": "power-bi-dla-wlasciciela-firmy",
+    "tytul": "Power BI dla właściciela firmy — co możesz mierzyć, czego dziś nie widzisz?",
+    "opis": "Dashboard, który zastępuje poranne pytania do kierowników. Jakie wskaźniki warto śledzić w firmie produkcyjnej i handlowej.",
+    "tagi": ["Power BI", "Analityka", "Raportowanie", "Produkcja"]
+  },
+  {
+    "slug": "mvp-w-4-miesiace-jak-to-mozliwe",
+    "tytul": "MVP w 4 miesiące — jak to możliwe i co znaczy \"gotowy system\"?",
+    "opis": "Dlaczego pierwsze wdrożenie powinno być małe, a nie doskonałe. Historia projektu SKI19 i lekcje z szybkiego startu.",
+    "tagi": ["MVP", "Wdrożenie", "Produkcja", "Case study"]
+  },
+  {
+    "slug": "wms-magazyn-bez-papieru",
+    "tytul": "WMS — jak cyfryzacja magazynu eliminuje błędy i przyspiesza wysyłki?",
+    "opis": "Od skanera kodów kreskowych po pełny system zarządzania magazynem. Co daje WMS w praktyce firmom z branży produkcyjnej i handlowej.",
+    "tagi": ["WMS", "Magazyn", "Logistyka", "Produkcja"]
+  },
+  {
+    "slug": "software-house-vs-freelancer",
+    "tytul": "Software house vs freelancer — co wybrać, zamawiając oprogramowanie na miarę?",
+    "opis": "Kiedy freelancer wystarczy, kiedy potrzebujesz zespołu i na co zwrócić uwagę, żeby nie skończyć z niegotowyn projektem.",
+    "tagi": ["Software house", "Zamówienie systemu", "MŚP"]
+  },
+  {
+    "slug": "iot-w-produkcji-pierwsze-kroki",
+    "tytul": "IoT w produkcji — jak zbierać dane z maszyn bez wielkiego budżetu?",
+    "opis": "Pierwsze kroki z danymi z linii produkcyjnej: co monitorować, jakie urządzenia, jak przetworzyć dane na decyzje.",
+    "tagi": ["IoT", "Produkcja", "Dane", "Automatyzacja"]
+  }
+]

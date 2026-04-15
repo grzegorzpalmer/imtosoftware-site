@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMTO Software - AI-Powered Software House</title>
+    <meta name="description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IMTO Software — AI-Powered Software House dla MŚP i produkcji">
+    <meta property="og:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <meta property="og:url" content="https://imtosoftware.pl/">
+    <meta property="og:image" content="https://imtosoftware.pl/images/logo-300x157.png">
+    <meta property="og:site_name" content="IMTO Software">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IMTO Software — AI-Powered Software House dla MŚP i produkcji">
+    <meta name="twitter:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#realizacje">Realizacje</a></li>
+                <li><a href="#branze">Branże</a></li>
+                <li><a href="#proces">Jak pracujemy</a></li>
+                <li><a href="o-nas.html">O nas</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+            </ul>
+            <a href="#kontakt" class="nav-cta">Umów konsultację</a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+        <a href="#uslugi">Usługi</a>
+        <a href="#realizacje">Realizacje</a>
+        <a href="#branze">Branże</a>
+        <a href="#proces">Jak pracujemy</a>
+        <a href="o-nas.html">O nas</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="#kontakt" class="nav-mobile-cta">Umów konsultację →</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-toning" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;">
+            <div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,0.12) 0%,rgba(139,94,60,0.06) 40%,transparent 70%);"></div>
+            <div style="position:absolute;top:-10%;right:-10%;width:60%;height:60%;background:radial-gradient(ellipse at center,rgba(139,94,60,0.08) 0%,rgba(80,60,40,0.03) 40%,transparent 70%);"></div>
+            <div style="position:absolute;top:30%;left:30%;width:50%;height:40%;background:radial-gradient(ellipse at center,rgba(201,168,76,0.05) 0%,transparent 70%);"></div>
+        </div>
+        <div class="hero-background">
+            <svg class="hero-svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#C9A84C;stop-opacity:0.22"/>
+                        <stop offset="100%" style="stop-color:#C9A84C;stop-opacity:0.06"/>
+                    </linearGradient>
+                    <linearGradient id="lineGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#8B5E3C;stop-opacity:0.16"/>
+                        <stop offset="100%" style="stop-color:#8B5E3C;stop-opacity:0.03"/>
+                    </linearGradient>
+                    <linearGradient id="lineGrad3" x1="20%" y1="0%" x2="80%" y2="100%">
+                        <stop offset="0%" style="stop-color:#D4B96A;stop-opacity:0.14"/>
+                        <stop offset="50%" style="stop-color:#C9A84C;stop-opacity:0.20"/>
+                        <stop offset="100%" style="stop-color:#8B5E3C;stop-opacity:0.04"/>
+                    </linearGradient>
+                    <linearGradient id="lineGrad4" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#C9A84C;stop-opacity:0.10"/>
+                        <stop offset="100%" style="stop-color:#D4B96A;stop-opacity:0.18"/>
+                    </linearGradient>
+                </defs>
+                <path d="M -200,950 C 100,750 300,550 500,400 S 800,200 1100,80 S 1400,-50 1700,-120" stroke="url(#lineGrad1)" stroke-width="3.5" fill="none" style="animation: flowLine1 16s linear infinite;"/>
+                <path d="M -100,1000 C 150,800 350,600 550,420 S 850,220 1150,60 S 1450,-80 1700,-140" stroke="url(#lineGrad3)" stroke-width="3" fill="none" style="animation: flowLine2 20s linear infinite;"/>
+                <path d="M 0,1050 C 200,850 400,650 600,450 S 900,250 1200,80 S 1500,-60 1700,-100" stroke="url(#lineGrad4)" stroke-width="2.8" fill="none" opacity="0.85" style="animation: flowLine3 24s linear infinite;"/>
+                <path d="M -300,900 C 0,700 250,500 480,350 S 750,180 1050,40 S 1350,-80 1700,-130" stroke="url(#lineGrad2)" stroke-width="2.5" fill="none" style="animation: flowLine4 22s linear infinite;"/>
+                <path d="M 50,980 C 280,780 480,580 680,400 S 950,200 1250,50 S 1550,-80 1700,-100" stroke="url(#lineGrad2)" stroke-width="2.2" fill="none" opacity="0.75" style="animation: flowLine5 28s linear infinite;"/>
+                <path d="M -150,850 C 100,650 320,450 540,300 S 800,140 1100,0 S 1400,-100 1700,-150" stroke="url(#lineGrad2)" stroke-width="1.8" fill="none" opacity="0.6" style="animation: flowLine1 34s linear infinite;"/>
+                <path d="M -50,920 C 180,720 380,520 580,360 S 860,170 1160,20 S 1460,-100 1700,-130" stroke="url(#lineGrad3)" stroke-width="1.5" fill="none" opacity="0.55" style="animation: flowLine3 30s linear infinite;"/>
+                <path d="M 100,1000 C 320,780 520,580 720,400 S 1000,200 1300,40 S 1600,-100 1700,-80" stroke="url(#lineGrad1)" stroke-width="1.2" fill="none" opacity="0.45" style="animation: flowLine5 36s linear infinite;"/>
+                <path d="M -250,1050 C 50,800 300,600 550,400 S 850,180 1150,20 S 1450,-120 1700,-160" stroke="url(#lineGrad4)" stroke-width="1" fill="none" opacity="0.4" style="animation: flowLine2 38s linear infinite;"/>
+                <path d="M -400,1100 C 0,850 300,600 600,400 S 1000,150 1400,-50 S 1600,-120 1800,-150" stroke="url(#lineGrad3)" stroke-width="5" fill="none" opacity="0.18" style="animation: flowLine4 42s linear infinite;"/>
+                <path d="M 200,1100 C 400,850 650,600 900,380 S 1200,150 1500,-30 S 1700,-100 1800,-120" stroke="url(#lineGrad1)" stroke-width="4.5" fill="none" opacity="0.15" style="animation: flowLine2 45s linear infinite;"/>
+                <path d="M -500,1000 C -100,750 200,500 500,300 S 850,100 1200,-50 S 1500,-150 1800,-200" stroke="url(#lineGrad4)" stroke-width="4" fill="none" opacity="0.12" style="animation: flowLine5 48s linear infinite;"/>
+            </svg>
+        </div>
+        <div class="hero-content">
+            <span class="hero-label">AI-Powered Software House · Polska</span>
+            <h1>Praca ręczna<br>pochłania Twój zespół?<br><span class="gold">Zmieniamy to dzięki oprogramowaniu z AI.</span></h1>
+            <p class="hero-subtitle">Projektujemy dedykowane systemy i wdrażamy AI w firmach MŚP i produkcyjnych. Prowadzimy Cię za rękę — od pierwszej rozmowy po działające rozwiązanie. Bez technicznego żargonu, z mierzalnym efektem.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Porozmawiajmy o Twoim projekcie →</button>
+                <a href="#realizacje" class="hero-link-secondary">Zobacz realizacje</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUSTED BY SECTION -->
+    <section class="trusted-section">
+        <div class="container">
+            <div class="trusted-label">Zaufali nam</div>
+            <div class="marquee">
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=aluterr.de/wp-content/uploads/2025/11/Aluterr-Profilsystem-Hersteller-logo-1.png&h=40&fit=contain" alt="Aluterr GmbH"></div><span class="marquee-logo-name">Aluterr GmbH</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.digitaltrading.co.uk/Portals/Digital-Trading-2019/logo.png&h=40&fit=contain" alt="Digital Trading LTD"></div><span class="marquee-logo-name">Digital Trading LTD</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=hact-it.de/wp-content/uploads/2023/08/cropped-Hact-logo.png&h=40&fit=contain" alt="HACT GmbH"></div><span class="marquee-logo-name">HACT GmbH</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.sawa-swarzedz.pl/theme/images/logo.svg&h=40&fit=contain" alt="SAWA"></div><span class="marquee-logo-name">SAWA</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-icon">OM</div><span class="marquee-logo-name">OMDE</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.alphatex.eu/wp-content/themes/Alphatex/images/Logo-gen.jpg&h=40&fit=contain" alt="Alpha Tex"></div><span class="marquee-logo-name">Alpha Tex</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-icon">MC</div><span class="marquee-logo-name">MCT Projekt</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="images/snapclick-logo.png" alt="Snapclick AI" style="border-radius:50%"></div><span class="marquee-logo-name">Snapclick AI</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=medinet.pl/themes/medinet/assets/images/medinet_logo.png&h=40&fit=contain" alt="Medinet S.A."></div><span class="marquee-logo-name">Medinet S.A.</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=grupaenergiage.pl/wp-content/themes/Designum/media/logo.png&h=40&fit=contain" alt="GB Grupa Energia"></div><span class="marquee-logo-name">GB Grupa Energia</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=simple.com.pl/wp-content/uploads/2025/06/logo-simple-erp-full-horizontal.svg&h=40&fit=contain" alt="Simple S.A."></div><span class="marquee-logo-name">Simple S.A.</span></div>
+                <!-- duplicate for seamless loop -->
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=aluterr.de/wp-content/uploads/2025/11/Aluterr-Profilsystem-Hersteller-logo-1.png&h=40&fit=contain" alt="Aluterr GmbH"></div><span class="marquee-logo-name">Aluterr GmbH</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.digitaltrading.co.uk/Portals/Digital-Trading-2019/logo.png&h=40&fit=contain" alt="Digital Trading LTD"></div><span class="marquee-logo-name">Digital Trading LTD</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=hact-it.de/wp-content/uploads/2023/08/cropped-Hact-logo.png&h=40&fit=contain" alt="HACT GmbH"></div><span class="marquee-logo-name">HACT GmbH</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.sawa-swarzedz.pl/theme/images/logo.svg&h=40&fit=contain" alt="SAWA"></div><span class="marquee-logo-name">SAWA</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-icon">OM</div><span class="marquee-logo-name">OMDE</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=www.alphatex.eu/wp-content/themes/Alphatex/images/Logo-gen.jpg&h=40&fit=contain" alt="Alpha Tex"></div><span class="marquee-logo-name">Alpha Tex</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-icon">MC</div><span class="marquee-logo-name">MCT Projekt</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="images/snapclick-logo.png" alt="Snapclick AI" style="border-radius:50%"></div><span class="marquee-logo-name">Snapclick AI</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=medinet.pl/themes/medinet/assets/images/medinet_logo.png&h=40&fit=contain" alt="Medinet S.A."></div><span class="marquee-logo-name">Medinet S.A.</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=grupaenergiage.pl/wp-content/themes/Designum/media/logo.png&h=40&fit=contain" alt="GB Grupa Energia"></div><span class="marquee-logo-name">GB Grupa Energia</span></div>
+                <div class="marquee-logo"><div class="marquee-logo-pill"><img loading="lazy" class="marquee-logo-img" src="https://images.weserv.nl/?url=simple.com.pl/wp-content/uploads/2025/06/logo-simple-erp-full-horizontal.svg&h=40&fit=contain" alt="Simple S.A."></div><span class="marquee-logo-name">Simple S.A.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLARS SECTION -->
+    <section class="section pillars" id="uslugi">
+        <div class="container">
+            <div class="section-label">Czym się zajmujemy</div>
+            <h2 class="section-heading">Gdzie Twoja firma traci czas —<br>i jak to naprawiamy</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card animate">
+                    <div class="pillar-number">01</div>
+                    <h3 class="pillar-title">AI agenci — Twój pracownik, który nie śpi</h3>
+                    <p class="pillar-description">Agent AI przetwarza Twoją skrzynkę, wyciąga zadania, terminy i priorytety — zanim zdążysz wypić kawę. Obsługuje zapytania, kategoryzuje dokumenty i raportuje bez angażowania zespołu. Pierwsze efekty po 2–4 tygodniach.<br><br><em style="color:var(--accent);font-style:normal;font-size:0.9rem;">Przykład: 60 maili → skrót i lista zadań w 2 minuty.</em></p>
+                    <div class="pillar-items">
+                        <div class="pillar-item">Automatyczna obsługa dokumentów i maili</div>
+                        <div class="pillar-item">Obsługa zapytań ofertowych 24/7</div>
+                        <div class="pillar-item">Raportowanie i podsumowania bez udziału człowieka</div>
+                    </div>
+                </div>
+                <div class="pillar-card animate">
+                    <div class="pillar-number">02</div>
+                    <h3 class="pillar-title">Integracja systemów i raportowanie</h3>
+                    <p class="pillar-description">Łączymy Twój ERP, CRM, magazyn i inne narzędzia w jeden działający ekosystem. Budujemy dashboardy Power BI, które dają Ci pełną widoczność biznesu w czasie rzeczywistym — bez arkuszy Excel i ręcznego zbierania danych.</p>
+                    <div class="pillar-items">
+                        <div class="pillar-item">Połączenie ERP, CRM i magazynu</div>
+                        <div class="pillar-item">Raporty i dashboardy Power BI</div>
+                        <div class="pillar-item">Automatyczne przepływy danych B2B/API</div>
+                    </div>
+                </div>
+                <div class="pillar-card animate">
+                    <div class="pillar-number">03</div>
+                    <h3 class="pillar-title">Dedykowane oprogramowanie</h3>
+                    <p class="pillar-description">Kiedy gotowe rozwiązania nie wystarczają — tworzymy systemy szyte na miarę Twojego biznesu. Panele zarządcze, aplikacje produkcyjne, portale klienta — z AI wbudowanym od podstaw.</p>
+                    <div class="pillar-items">
+                        <div class="pillar-item">Systemy zarządzania produkcją</div>
+                        <div class="pillar-item">Platformy B2B i portale klienta</div>
+                        <div class="pillar-item">Dashboardy z analityką i predykcją AI</div>
+                    </div>
+                </div>
+                <div class="pillar-card animate">
+                    <div class="pillar-number">04</div>
+                    <h3 class="pillar-title">Wsparcie i partnerstwo</h3>
+                    <p class="pillar-description">Nie znikamy po wdrożeniu. Zostajemy z Tobą jako partner technologiczny: rozwijamy system, szkolimy zespół, monitorujemy działanie i reagujemy na problemy, zanim Ty je zauważysz.</p>
+                    <div class="pillar-items">
+                        <div class="pillar-item">Dedykowany opiekun projektu</div>
+                        <div class="pillar-item">Szkolenia dla całego zespołu</div>
+                        <div class="pillar-item">Monitoring i utrzymanie 24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section class="section metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-number">60h</div>
+                    <div class="metric-label">tygodniowo odzyskują firmy po wdrożeniu automatyzacji z IMTO — to równowartość 1,5 etatu</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">40%</div>
+                    <div class="metric-label">mniej czasu na operacjach ręcznych — mierzone u klientów z branży produkcyjnej i logistyki</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">17+</div>
+                    <div class="metric-label">lat budowania systemów dla MŚP i firm produkcyjnych</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">projektów oddanych w terminie — sprawdź nasze realizacje</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="section case-studies" id="realizacje">
+        <div class="container">
+            <div class="section-label">Realizacje</div>
+            <h2 class="section-heading" style="font-size:clamp(1.7rem,3vw,2.6rem)">Firmy, które przestały tracić czas —<br>i zaczęły rosnąć szybciej</h2>
+            <div class="case-grid">
+                <div class="case-card animate">
+                    <a href="realizacje/uda.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/hact.png" alt="HACT GmbH — UDA system" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Produkcja · Niemcy</div>
+                        <h3 class="case-headline">UDA — CRM + ERP + WMS + projektowanie 2D</h3>
+                        <p class="case-description">Kompletna aplikacja do zarządzania wszystkimi procesami firmy: projektowanie 2D konstrukcji, oferty, sprzedaż, magazyn, produkcja.</p>
+                        <a href="realizacje/uda.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/ski19.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/sawa.png" alt="SAWA — SKI19 system" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Produkcja tekstylna · 150 maszyn</div>
+                        <h3 class="case-headline">SKI19 — system dla przemysłu tekstylnego</h3>
+                        <p class="case-description">CRM + ERP + WMS z integracją danych z ponad 150 maszyn tekstylnych. Pierwsze MVP gotowe w 4 miesiące.</p>
+                        <a href="realizacje/ski19.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/snapclick.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/snapclick.png" alt="Snapclick AI" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">AI · Fotografia produktowa</div>
+                        <h3 class="case-headline">Snapclick AI — zdjęcia produktowe z AI</h3>
+                        <p class="case-description">Narzędzie AI do generowania profesjonalnych zdjęć produktowych. Ponad 1000 gotowych inspiracji, 4 warianty kreatywne.</p>
+                        <a href="realizacje/snapclick.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/alphatex.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/alphatex.png" alt="Alpha Tex — CRM ERP WMS" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Produkcja · Raportowanie Power BI</div>
+                        <h3 class="case-headline">CRM + ERP + WMS z analityką w czasie rzeczywistym</h3>
+                        <p class="case-description">System sprzedaży i produkcji w branży tekstylnej. Moduł Power BI zapewnia analizę danych produkcyjnych w czasie rzeczywistym.</p>
+                        <a href="realizacje/alphatex.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/omde.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/omde.png" alt="OMDE — Media Markt" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Retail · Planowanie instalacji</div>
+                        <h3 class="case-headline">Aplikacja instalacyjna dla Media Markt i Saturn</h3>
+                        <p class="case-description">System dla pracowników Media Markt i instalatorów OMDE. Natychmiastowy podgląd dostępnych terminów i stref instalacji w całym mieście.</p>
+                        <a href="realizacje/omde.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/suswat.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/2_suswat-1.png" alt="Digital Trading — SUSWAT" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Integracje B2B · Projekt międzynarodowy</div>
+                        <h3 class="case-headline">SUSWAT — planowanie wodociągów w Afryce</h3>
+                        <p class="case-description">Rozwiązanie do planowania systemów wodnych dla eWaterPay — budowa studni, dostęp przez przedpłacone tagi IoT. Wdrożone w Afryce Subsaharyjskiej.</p>
+                        <a href="realizacje/suswat.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE CAROUSEL -->
+            <div class="case-carousel-wrap" id="caseCarousel">
+                <div class="case-carousel-viewport">
+                    <div class="case-carousel-track" id="caseTrack">
+                        <div class="case-card"><a href="realizacje/uda.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/hact.png" alt="HACT GmbH" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Produkcja · Niemcy</div><h3 class="case-headline">UDA — CRM + ERP + WMS + projektowanie 2D</h3><p class="case-description">Kompletna aplikacja do zarządzania wszystkimi procesami firmy.</p><a href="realizacje/uda.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/ski19.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/sawa.png" alt="SAWA" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Produkcja tekstylna · 150 maszyn</div><h3 class="case-headline">SKI19 — system dla przemysłu tekstylnego</h3><p class="case-description">CRM + ERP + WMS z integracją danych z ponad 150 maszyn tekstylnych.</p><a href="realizacje/ski19.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/snapclick.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/snapclick.png" alt="Snapclick AI" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · Fotografia produktowa</div><h3 class="case-headline">Snapclick AI — zdjęcia produktowe z AI</h3><p class="case-description">Narzędzie AI do generowania profesjonalnych zdjęć produktowych.</p><a href="realizacje/snapclick.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/alphatex.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/alphatex.png" alt="Alpha Tex" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Produkcja · Raportowanie Power BI</div><h3 class="case-headline">CRM + ERP + WMS z analityką w czasie rzeczywistym</h3><p class="case-description">System sprzedaży i produkcji z modułem Power BI.</p><a href="realizacje/alphatex.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/omde.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/omde.png" alt="OMDE" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Retail · Planowanie instalacji</div><h3 class="case-headline">Aplikacja instalacyjna dla Media Markt i Saturn</h3><p class="case-description">System planowania terminów instalacji dla całego miasta.</p><a href="realizacje/omde.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/suswat.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/2_suswat-1.png" alt="SUSWAT" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Integracje B2B · Projekt międzynarodowy</div><h3 class="case-headline">SUSWAT — planowanie wodociągów w Afryce</h3><p class="case-description">Systemy wodne dla eWaterPay — IoT, Afryka Subsaharyjska.</p><a href="realizacje/suswat.html" class="case-link">Zobacz projekt →</a></div></div>
+                    </div>
+                </div>
+                <div class="case-carousel-nav">
+                    <button class="carousel-btn" id="carouselPrev">&#8592;</button>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="carousel-btn" id="carouselNext">&#8594;</button>
+                </div>
+            </div>
+
+            <div style="text-align:center;margin-top:48px;">
+                <a href="realizacje/index.html" class="btn btn-outline" style="display:inline-block;text-decoration:none;">Zobacz wszystkie realizacje →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section industries" id="branze">
+        <div class="container">
+            <div class="section-label">Dla kogo pracujemy</div>
+            <h2 class="section-heading">Specjalizujemy się w MŚP<br>i firmach produkcyjnych —<br>bo znamy ich procesy od środka</h2>
+            <div class="industries-grid">
+                <div class="industry-card animate">
+                    <h3>Małe i średnie przedsiębiorstwa</h3>
+                    <p>Prowadzisz firmę i masz za dużo na głowie, żeby jeszcze rozumieć technologię — to rozumiemy. Pomagamy właścicielom MŚP wdrożyć automatyzację krok po kroku: bez żargonu, z jasnym ROI i pełnym wsparciem na każdym etapie.</p>
+                    <div class="pillar-items" style="margin-top:24px;">
+                        <div class="pillar-item">Automatyzacja procesów biurowych</div>
+                        <div class="pillar-item">CRM i obsługa klienta z AI</div>
+                        <div class="pillar-item">Systemy obiegu dokumentów</div>
+                        <div class="pillar-item">AI w sprzedaży i marketingu</div>
+                    </div>
+                </div>
+                <div class="industry-card animate">
+                    <h3>Produkcja i logistyka</h3>
+                    <p>Twoja hala może działać sprawniej, niż myślisz. Łączymy systemy produkcyjne z magazynem i ERP, wdrażamy AI do planowania i predykcji awarii. Efekt: mniej przestojów, lepsza widoczność nad całym procesem i decyzje oparte na danych — nie na przeczuciach.</p>
+                    <div class="pillar-items" style="margin-top:24px;">
+                        <div class="pillar-item">Integracja ERP / WMS</div>
+                        <div class="pillar-item">Planowanie i harmonogramowanie</div>
+                        <div class="pillar-item">Predykcja awarii i przestojów</div>
+                        <div class="pillar-item">Zarządzanie zapasami w czasie rzeczywistym</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section process" id="proces">
+        <div class="container">
+            <div class="section-label">Jak pracujemy</div>
+            <h2 class="section-heading" style="font-size:clamp(1.7rem,3vw,2.6rem)">Prowadzimy Cię za rękę —<br>od pierwszej rozmowy do systemu,<br>który pracuje za Ciebie</h2>
+            <div class="process-timeline">
+                <div class="process-step animate">
+                    <div class="process-circle">1</div>
+                    <div class="process-content">
+                        <h3>Bezpłatna konsultacja i audyt</h3>
+                        <p>Rozmawiamy o Twoim biznesie. Pokazujemy konkretnie, gdzie tracisz czas i pieniądze. Zero zobowiązań — nawet jeśli nie zdecydujesz się na współpracę, wyjdziesz z wartościową wiedzą.</p>
+                        <div class="process-time">1–2 dni</div>
+                    </div>
+                </div>
+                <div class="process-step animate">
+                    <div class="process-circle">2</div>
+                    <div class="process-content">
+                        <h3>Propozycja i roadmapa</h3>
+                        <p>Przedstawiamy konkretny plan: co wdrożymy, w jakiej kolejności, ile to zajmie i ile kosztuje. Bez ukrytych kosztów, bez technicznego bełkotu — tylko rzeczy, które rozumie każdy właściciel firmy.</p>
+                        <div class="process-time">Tydzień 1</div>
+                    </div>
+                </div>
+                <div class="process-step animate">
+                    <div class="process-circle">3</div>
+                    <div class="process-content">
+                        <h3>Wdrożenie krok po kroku</h3>
+                        <p>Pracujemy iteracyjnie — co 2 tygodnie widzisz nowe działające funkcjonalności. Jesteś na bieżąco bez konieczności siedzenia w specyfikacjach. Twoje dane i procesy są bezpieczne przez cały czas.</p>
+                        <div class="process-time">4–16 tygodni</div>
+                    </div>
+                </div>
+                <div class="process-step animate">
+                    <div class="process-circle">4</div>
+                    <div class="process-content">
+                        <h3>Testy i szkolenie zespołu</h3>
+                        <p>Zanim uruchomimy produkcyjnie — wszystko testujemy. Szkolimy Twój zespół tak, żeby każdy wiedział co robić. Nie zostawiamy Cię z nowym systemem bez instrukcji obsługi.</p>
+                        <div class="process-time">1–2 tygodnie</div>
+                    </div>
+                </div>
+                <div class="process-step animate">
+                    <div class="process-circle">5</div>
+                    <div class="process-content">
+                        <h3>Uruchomienie i długoterminowe partnerstwo</h3>
+                        <p>Wdrażamy, monitorujemy i rozwijamy dalej. Jesteśmy dostępni, gdy pojawi się problem. Reagujemy szybko — bo rozumiemy, że Twój biznes nie może czekać na zgłoszenie w ticketach.</p>
+                        <div class="process-time">Bezterminowo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-label">Opinie klientów</div>
+            <h2 class="section-heading">Co mówią właściciele,<br>którym pomogliśmy</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <div class="testimonial-author-logo">
+                        <img loading="lazy" src="https://images.weserv.nl/?url=aluterr.de/wp-content/uploads/2025/11/Aluterr-Profilsystem-Hersteller-logo-1.png&h=52&fit=contain" alt="Aluterr GmbH">
+                    </div>
+                    <p class="testimonial-quote">Dokładna analiza, komunikacja w przystępnym, nietechnicznym języku i skupienie się na rzeczywistych potrzebach umożliwiły stworzenie oprogramowania, które naprawdę wspiera naszą firmę w codziennej pracy.</p>
+                    <div class="testimonial-author-name">S. Hołda</div>
+                    <div class="testimonial-author-role">Właściciel, Aluterr GmbH</div>
+                    <div class="testimonial-project">System CRM/ERP/WMS</div>
+                </div>
+                <div class="testimonial-card animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <div class="testimonial-author-logo">
+                        <img loading="lazy" src="https://images.weserv.nl/?url=www.digitaltrading.co.uk/Portals/Digital-Trading-2019/logo.png&h=52&fit=contain" alt="Digital Trading LTD">
+                    </div>
+                    <p class="testimonial-quote">Wiedza reprezentowana jest na bardzo wysokim poziomie, firma wyróżnia się również pod względem wdrażania nowoczesnych rozwiązań, które ułatwiają integrację różnych obszarów działalności firmy.</p>
+                    <div class="testimonial-author-name">B. Janaszek</div>
+                    <div class="testimonial-author-role">Dyrektor, Digital Trading LTD</div>
+                    <div class="testimonial-project">Projekt SUSWAT i Vitra</div>
+                </div>
+                <div class="testimonial-card animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <div class="testimonial-author-logo">
+                        <span class="testimonial-author-logo-text">OMDE</span>
+                    </div>
+                    <p class="testimonial-quote">Warto podkreślić, że oprócz szybkiej reakcji na zapotrzebowanie, firma sama aktywnie proponuje rozwiązania, które usprawniają pracę systemu lub obsługujących go osób.</p>
+                    <div class="testimonial-author-name">J. Skrzynecki</div>
+                    <div class="testimonial-author-role">Właściciel, OMDE sp. z o.o.</div>
+                    <div class="testimonial-project">Aplikacja instalacyjna Media Markt</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+        <div class="container">
+            <div class="section-label">Częste pytania</div>
+            <h2 class="section-heading">Pytania, które słyszymy<br>najczęściej</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary class="faq-summary">Nie znam się na technologii. Czy poradzę sobie ze współpracą z IMTO?</summary>
+                    <div class="faq-content">
+                        To właśnie nasz model pracy. Nie oczekujemy, że będziesz znał się na AI czy programowaniu. Tłumaczymy wszystko językiem biznesowym, proponujemy konkretne rozwiązania i prowadzimy Cię przez cały proces. Jedyne czego potrzebujemy to znajomości własnego biznesu — resztą zajmujemy się my.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-summary">Ile kosztuje wdrożenie AI lub dedykowanego systemu?</summary>
+                    <div class="faq-content">
+                        Zakresy zależą od złożoności projektu. Proste automatyzacje i agenci AI — od ok. 30 000 zł. Integracje i systemy klasy CRM/ERP/WMS — zazwyczaj 50 000–200 000 zł, rozłożone na etapy, żebyś nie płacił wszystkiego z góry.<br><br>
+                        Zawsze zaczynamy od bezpłatnej analizy — bez zobowiązań, bez podpisywania czegokolwiek. Dopiero po niej dostaniesz konkretną wycenę z jasnym ROI. Bez niespodzianek.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-summary">Jak szybko zobaczę pierwsze efekty?</summary>
+                    <div class="faq-content">
+                        Pracujemy iteracyjnie — pierwsze działające elementy masz po 2–4 tygodniach. Nie czekasz miesięcy na efekty. Dla prostszych automatyzacji efekty bywają widoczne jeszcze przed formalnym wdrożeniem. Na każdym etapie wiesz, co robimy i co z tego wynika.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-summary">Mam stare systemy — ERP sprzed 10 lat, dużo Exceli. Czy da się to zintegrować?</summary>
+                    <div class="faq-content">
+                        Tak — i to jest jeden z naszych najczęstszych scenariuszy. Nie wymagamy, żebyś wyrzucał stare systemy. Budujemy warstwę integracyjną, która pozwala nowym rozwiązaniom działać razem ze starymi. Migracja, jeśli potrzebna, odbywa się stopniowo — bez zatrzymania firmy.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-summary">Czy AI zastąpi moich pracowników?</summary>
+                    <div class="faq-content">
+                        Nie — AI przejmuje powtarzalne, mechaniczne zadania, które i tak nikt nie lubi robić: przepisywanie danych, generowanie raportów, obsługę standardowych zapytań. Twoi ludzie zyskują czas na pracę, która naprawdę wymaga ich wiedzy i doświadczenia. Efekt: wyższa wartość z każdej osoby w zespole, nie mniej etatów.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Left: info -->
+                <div class="contact-info animate">
+                    <span class="section-label">Kontakt</span>
+                    <h2>Masz projekt w głowie?<br>Sprawdźmy to razem.</h2>
+                    <p>W 15 minut pokażemy Ci — bez owijania w bawełnę i bez slajdów sprzedażowych — gdzie w Twoim procesie jest największy potencjał do automatyzacji i ile możesz na tym zyskać.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">✉</div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Email</span>
+                                <a href="mailto:biuro@imtosoftware.pl" class="contact-detail-value">biuro@imtosoftware.pl</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">☎</div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Telefon</span>
+                                <a href="tel:+48500263639" class="contact-detail-value">+48 500 26 36 39</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">◎</div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Adres</span>
+                                <span class="contact-detail-value">ul. Hubska 52/14, 50-502 Wrocław</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">◷</div>
+                            <div class="contact-detail-text">
+                                <span class="contact-detail-label">Czas odpowiedzi</span>
+                                <span class="contact-detail-value">Ten sam dzień roboczy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="contact-form animate">
+                    <!-- ACTION: zamień YOUR_FORM_ID na ID z formspree.io/f/YOUR_FORM_ID -->
+                    <form id="contactForm" action="https://formspree.io/f/xyklkgvr" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Imię i nazwisko <span class="required">*</span></label>
+                                <input type="text" name="name" placeholder="Jan Kowalski" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" name="email" placeholder="jan@firma.pl" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Firma</label>
+                                <input type="text" name="company" placeholder="Nazwa firmy">
+                            </div>
+                            <div class="form-group">
+                                <label>Telefon</label>
+                                <input type="tel" name="phone" placeholder="+48 500 000 000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>W czym możemy pomóc? <span class="required">*</span></label>
+                            <textarea name="message" placeholder="Opisz krótko swój proces lub problem — np. ręczne przepisywanie danych, brak integracji między systemami, potrzeba automatyzacji raportów…" required></textarea>
+                        </div>
+                        <!-- Honeypot: ukryte przed ludźmi, widoczne dla botów -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="form-submit-row">
+                            <span class="form-note">Żadnych zobowiązań · Odpowiadamy tego samego dnia</span>
+                            <button type="submit" class="btn btn-primary">Wyślij wiadomość →</button>
+                        </div>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        Wiadomość wysłana! Odezwiemy się tego samego dnia roboczego.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>IMTO Software</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">AI-Powered Software House dla MŚP i firm produkcyjnych, które chcą rosnąć szybciej — bez zbędnego bólu głowy od technologii.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="#uslugi">AI Agenci</a></li>
+                        <li><a href="#uslugi">Integracja Systemów</a></li>
+                        <li><a href="#uslugi">Dedykowane Oprogramowanie</a></li>
+                        <li><a href="#uslugi">Wsparcie i Partnerstwo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="o-nas.html">O nas</a></li>
+                        <li><a href="#realizacje">Realizacje</a></li>
+                        <li><a href="#branze">Branże</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li>
+                        <li><a href="tel:+48500263639">+48 500 26 36 39</a></li>
+                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 IMTO Software. Wszelkie prawa zastrzeżone. &nbsp;·&nbsp; <a href="polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">Polityka prywatności</a></div>
+                <div class="footer-languages">
+                    <a href="#" class="active">PL</a>
+                    <span>|</span>
+                    <a href="#">EN</a>
+                    <span>|</span>
+                    <a href="#">DE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COOKIE CONSENT -->
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informacja o plikach cookie">
+        <p class="cookie-text">
+            Używamy plików cookie, aby zapewnić prawidłowe działanie strony oraz analizować ruch (Google Analytics). Możesz zaakceptować wszystkie pliki cookie lub odrzucić te nieobowiązkowe.
+            <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        </p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn-reject" id="cookieReject">Tylko niezbędne</button>
+            <button class="cookie-btn-accept" id="cookieAccept">Akceptuj wszystkie</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — IMTO Software</title>
+    <meta name="description" content="Praktyczny przewodnik po IT dla właścicieli firm. AI, automatyzacja, ERP, Power BI — bez buzzwordów.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog — IMTO Software">
+    <meta property="og:description" content="Praktyczny przewodnik po IT dla właścicieli firm. AI, automatyzacja, ERP, Power BI — bez buzzwordów.">
+    <meta property="og:url" content="https://imtosoftware.pl/blog/">
+    <meta property="og:image" content="https://imtosoftware.pl/images/logo-300x157.png">
+    <meta property="og:site_name" content="IMTO Software">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — IMTO Software">
+    <meta name="twitter:description" content="Praktyczny przewodnik po IT dla właścicieli firm. AI, automatyzacja, ERP, Power BI — bez buzzwordów.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero { padding: 140px 0 72px; text-align: center; position: relative; overflow: hidden; }
+        .blog-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.1; margin: 16px 0 24px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 72px 0 80px; }
+        .blog-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; text-decoration: none; display: block; color: inherit; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(201,168,76,0.09); border-color: rgba(201,168,76,0.2); }
+        .blog-card-body { padding: 28px; }
+        .blog-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+        .blog-card-date { font-size: 0.8rem; color: var(--text-muted); }
+        .blog-card-tag { font-size: 0.72rem; font-weight: 600; color: var(--accent); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .blog-card-title { font-size: 1.1rem; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: var(--text-primary); }
+        .blog-card-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; }
+        .blog-card-link { font-size: 0.875rem; font-weight: 600; color: var(--accent); }
+        .blog-empty { grid-column: 1 / -1; text-align: center; padding: 80px 24px; color: var(--text-muted); }
+        .blog-empty p { font-size: 1rem; line-height: 1.7; max-width: 500px; margin: 0 auto; }
+        @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#uslugi">Usługi</a></li>
+                <li><a href="../index.html#realizacje">Realizacje</a></li>
+                <li><a href="../index.html#branze">Branże</a></li>
+                <li><a href="../index.html#proces">Jak pracujemy</a></li>
+                <li><a href="../o-nas.html">O nas</a></li>
+                <li><a href="index.html" style="color: var(--accent);">Blog</a></li>
+            </ul>
+            <a href="../index.html#kontakt" class="nav-cta">Umów konsultację</a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+        <a href="../index.html#uslugi">Usługi</a>
+        <a href="../index.html#realizacje">Realizacje</a>
+        <a href="../index.html#branze">Branże</a>
+        <a href="../index.html#proces">Jak pracujemy</a>
+        <a href="../o-nas.html">O nas</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#kontakt" class="nav-mobile-cta">Umów konsultację →</a>
+    </div>
+
+    <section class="blog-hero">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;">
+            <div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,0.08) 0%,transparent 70%);"></div>
+        </div>
+        <div class="container" style="position:relative;z-index:1;">
+            <span class="section-label">Blog</span>
+            <h1>Praktyczny przewodnik po IT<br>dla właścicieli firm</h1>
+            <p style="color:var(--text-muted);font-size:1.1rem;max-width:580px;margin:0 auto;line-height:1.7;">Bez buzzwordów. Piszemy o tym, jak AI i dedykowane oprogramowanie realnie oszczędzają czas i pieniądze w MŚP i firmach produkcyjnych.</p>
+        </div>
+    </section>
+
+    <section style="padding-bottom: 80px;">
+        <div class="container">
+            <div class="blog-grid" id="blogGrid">
+
+                <a href="wpisy/jak-wdrozyc-pierwszego-ai-agenta.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">1 kwietnia 2026</span>
+                            <span class="blog-card-tag">AI</span>
+                            <span class="blog-card-tag">Wdrożenie</span>
+                        </div>
+                        <div class="blog-card-title">Jak wdrożyć pierwszego AI Agenta w firmie bez działu IT?</div>
+                        <div class="blog-card-desc">Praktyczny przewodnik krok po kroku — od znalezienia właściwego problemu, przez wybór partnera, po mierzenie efektów. Bez działu IT, bez rewolucji.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/power-bi-dla-wlasciciela-firmy.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">15 marca 2026</span>
+                            <span class="blog-card-tag">Analityka</span>
+                            <span class="blog-card-tag">Power BI</span>
+                        </div>
+                        <div class="blog-card-title">Power BI dla właściciela firmy — zacznij widzieć dane, nie tabelki</div>
+                        <div class="blog-card-desc">Kluczowe wskaźniki firmy w jednym miejscu, odświeżane automatycznie. Jak to działa, skąd bierze dane i ile kosztuje uruchomienie pierwszego dashboardu.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/automatyzacja-ai-w-magazynie.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">1 marca 2026</span>
+                            <span class="blog-card-tag">AI</span>
+                            <span class="blog-card-tag">Magazyn</span>
+                        </div>
+                        <div class="blog-card-title">Automatyzacja z AI w magazynie — pierwsze kroki</div>
+                        <div class="blog-card-desc">Prognozowanie zapotrzebowania, automatyczne sygnały uzupełnień, optymalizacja kompletacji. Gdzie zacząć i kiedy AI w magazynie ma sens finansowy.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/kiedy-wdrozenie-sie-nie-oplaca.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">15 lutego 2026</span>
+                            <span class="blog-card-tag">Strategia IT</span>
+                            <span class="blog-card-tag">MŚP</span>
+                        </div>
+                        <div class="blog-card-title">Kiedy wdrożenie oprogramowania się NIE opłaca</div>
+                        <div class="blog-card-desc">Mówimy to rzadko — bo sami wdrażamy oprogramowanie. Ale są sytuacje, kiedy lepiej poczekać. Sześć scenariuszy, w których wdrożenie skończy się frustracją i stratą budżetu.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/ai-skraca-czas-obslugi-zamowien.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">1 lutego 2026</span>
+                            <span class="blog-card-tag">AI</span>
+                            <span class="blog-card-tag">Sprzedaż</span>
+                        </div>
+                        <div class="blog-card-title">Jak AI skraca czas obsługi zamówień o 60%?</div>
+                        <div class="blog-card-desc">Konkretny przykład z firmy produkcyjnej — co agent AI robi z zamówieniem od klienta i gdzie leży ta oszczędność czasu. Z liczbami, bez ogólników.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/excel-to-nie-system.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">15 stycznia 2026</span>
+                            <span class="blog-card-tag">Operacje</span>
+                            <span class="blog-card-tag">MŚP</span>
+                        </div>
+                        <div class="blog-card-title">Excel to nie system — kiedy arkusz kosztuje więcej niż oprogramowanie</div>
+                        <div class="blog-card-desc">Firma produkcyjna traci 46 800 zł rocznie na przepisywaniu danych między Excelami. Jak policzyć koszt ukryty w arkuszach i kiedy warto powiedzieć stop.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/ai-agent-w-firmie-produkcyjnej.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">1 stycznia 2026</span>
+                            <span class="blog-card-tag">AI</span>
+                            <span class="blog-card-tag">Automatyzacja</span>
+                        </div>
+                        <div class="blog-card-title">AI Agent w firmie produkcyjnej — co to znaczy w praktyce?</div>
+                        <div class="blog-card-desc">Agent AI to nie chatbot — to oprogramowanie, które działa autonomicznie. Cztery konkretne przykłady z produkcji i odpowiedź na pytanie: ile to kosztuje i kiedy się zwraca.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/ile-kosztuje-wdrozenie-erp.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">15 grudnia 2025</span>
+                            <span class="blog-card-tag">ERP</span>
+                            <span class="blog-card-tag">Koszty</span>
+                        </div>
+                        <div class="blog-card-title">Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej?</div>
+                        <div class="blog-card-desc">Rozbijamy temat na czynniki pierwsze — cztery składniki kosztu, trzy przedziały cenowe, pułapki których nie widać w ofercie. Bez owijania w bawełnę.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-bottom">
+        <div class="container">
+            <div class="cta-content animate">
+                <h2>Chcesz wdrożyć to, o czym czytasz?</h2>
+                <p>Bezpłatna 15-minutowa rozmowa — pokażemy Ci, gdzie w Twoim biznesie jest największy potencjał.</p>
+                <a href="../index.html#kontakt" class="btn btn-primary">Zarezerwuj bezpłatne 15 minut →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>IMTO Software</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">AI-Powered Software House dla MŚP i firm produkcyjnych.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="../index.html#uslugi">AI Agenci</a></li>
+                        <li><a href="../index.html#uslugi">Integracja Systemów</a></li>
+                        <li><a href="../index.html#uslugi">Dedykowane Oprogramowanie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Firma</h4>
+                    <ul>
+                        <li><a href="../o-nas.html">O nas</a></li>
+                        <li><a href="../realizacje/index.html">Realizacje</a></li>
+                        <li><a href="index.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li>
+                        <li><a href="tel:+48500263639">+48 500 26 36 39</a></li>
+                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 IMTO Software. Wszelkie prawa zastrzeżone. &nbsp;·&nbsp; <a href="../polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;">Polityka prywatności</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informacja o plikach cookie">
+        <p class="cookie-text">Używamy plików cookie, aby zapewnić prawidłowe działanie strony. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn-reject" id="cookieReject">Tylko niezbędne</button>
+            <button class="cookie-btn-accept" id="cookieAccept">Akceptuj wszystkie</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
