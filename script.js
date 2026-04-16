@@ -197,3 +197,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         });
     });
 })();
+
+// === STICKY MOBILE BAR ===
+(function() {
+    var bar = document.getElementById('mobileStickyBar');
+    var kontakt = document.getElementById('kontakt');
+    if (!bar) return;
+
+    function updateBar() {
+        var scrollY = window.scrollY || window.pageYOffset;
+        if (scrollY < 300) {
+            bar.classList.remove('visible');
+            return;
+        }
+        // Hide when contact section is visible
+        if (kontakt) {
+            var rect = kontakt.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.8) {
+                bar.classList.remove('visible');
+                return;
+            }
+        }
+        bar.classList.add('visible');
+    }
+
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+})();
