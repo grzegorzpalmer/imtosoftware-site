@@ -650,7 +650,7 @@ body {
     display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .case-grid {
         display: none;
     }
@@ -1028,7 +1028,7 @@ body {
     user-select: none;
 }
 
-.faq-summary::before {
+.faq-summary::after {
     content: "+";
     font-size: 1.5rem;
     color: var(--accent);
@@ -1037,7 +1037,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.faq-item[open] .faq-summary::before {
+.faq-item[open] .faq-summary::after {
     transform: rotate(45deg);
 }
 
@@ -1179,7 +1179,6 @@ footer {
         max-width: 300px;
     }
 
-    .case-grid,
     .industries-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
@@ -1618,4 +1617,58 @@ svg path {
 
 .map-address strong {
     color: var(--text-primary);
+}
+
+/* === MOBILE FIXES === */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Metrics section padding */
+    .metrics {
+        padding: 60px 0;
+    }
+
+    /* Reduce metrics grid gap so it stacks cleanly */
+    .metrics-grid {
+        gap: 32px;
+    }
+
+    /* FAQ list — reduce top/bottom margin */
+    .faq-list {
+        margin: 32px auto;
+    }
+
+    /* FAQ summary — increase tap target, reasonable font size */
+    .faq-summary {
+        padding: 18px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* FAQ content padding */
+    .faq-content {
+        padding: 0 20px 20px 20px;
+    }
+
+    /* Process section spacing */
+    .process-steps {
+        gap: 24px;
+    }
+
+    /* Testimonials section */
+    .testimonials {
+        padding: 60px 0;
+    }
+
+    /* Pillars section */
+    .pillars-grid {
+        margin-top: 32px;
+    }
+
+    /* Section heading margin */
+    .section-heading {
+        margin-bottom: 24px;
+    }
 }

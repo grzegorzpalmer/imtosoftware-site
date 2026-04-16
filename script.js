@@ -1,7 +1,7 @@
 // === INTERSECTION OBSERVER (fade-in animations) ===
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -30px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
