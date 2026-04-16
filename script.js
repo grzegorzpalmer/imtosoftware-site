@@ -122,13 +122,34 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 (function() {
     var form = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
+    var bar = document.getElementById('formProgressBar');
     if (!form) return;
+
+    function progressStart() {
+        bar.style.transition = 'width 2.5s ease-out';
+        bar.style.width = '0%';
+        // force reflow so transition fires from 0
+        bar.offsetWidth;
+        bar.style.width = '72%';
+    }
+
+    function progressDone(callback) {
+        bar.style.transition = 'width 0.25s ease';
+        bar.style.width = '100%';
+        setTimeout(callback, 280);
+    }
+
+    function progressReset() {
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
+    }
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         var btn = form.querySelector('button[type="submit"]');
         btn.textContent = 'Wysyłanie…';
         btn.disabled = true;
+        progressStart();
 
         fetch(form.action, {
             method: 'POST',
@@ -137,14 +158,19 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         })
         .then(function(res) {
             if (res.ok) {
-                form.style.display = 'none';
-                success.style.display = 'block';
+                progressDone(function() {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
             } else {
+                progressReset();
                 btn.textContent = 'Błąd — spróbuj ponownie';
                 btn.disabled = false;
             }
         })
         .catch(function() {
+            progressReset();
             btn.textContent = 'Błąd — spróbuj ponownie';
             btn.disabled = false;
         });

@@ -1166,7 +1166,7 @@ footer {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 60px 24px;
+        padding: 100px 24px 60px;
     }
 
     .hero-buttons {
@@ -1323,6 +1323,26 @@ svg path {
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Progress bar */
+.form-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+}
+
+.form-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), #f0c940);
+    border-radius: 0 2px 2px 0;
+    transition: width 0.3s ease;
 }
 
 @media (max-width: 600px) {
