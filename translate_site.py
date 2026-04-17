@@ -69,13 +69,14 @@ def translate_html(html: str, target_lang: str) -> str:
     return data["translations"][0]["text"]
 
 # ── Naprawianie ścieżek ─────────────────────────────────────────────────────
-def fix_asset_paths(html: str) -> str:
-    """Zamienia względne ścieżki do zasobów na bezwzględne."""
-    html = re.sub(r'(href|src)="(?:\.\./)*(style\.css)"',    r'\1="/\2"',       html)
-    html = re.sub(r'(href|src)="(?:\.\./)*(script\.js)"',    r'\1="/\2"',       html)
-    html = re.sub(r'(src|href)="(?:\.\./)*(images/[^"]*)"',  r'\1="/\2"',       html)
-    html = re.sub(r'(href)="(?:\.\./)*(sitemap\.xml)"',       r'\1="/\2"',       html)
-    html = re.sub(r'(href)="(?:\.\./)*(robots\.txt)"',        r'\1="/\2"',       html)
+def fix_asset_paths(html: str, depth: int = 1) -> str:
+    """Zamienia ścieżki do zasobów na relatywne (../x razy) — działa na GitHub Pages i własnej domenie."""
+    prefix = "../" * depth   # depth=1 → "../"  depth=2 → "../../"  itd.
+    html = re.sub(r'(href|src)="(?:\.\./)*(style\.css)"',    f'\\1="{prefix}style.css"',    html)
+    html = re.sub(r'(href|src)="(?:\.\./)*(script\.js)"',    f'\\1="{prefix}script.js"',    html)
+    html = re.sub(r'(src|href)="(?:\.\./)*(images/[^"]*)"',  f'\\1="{prefix}\\2"',          html)
+    html = re.sub(r'(href)="(?:\.\./)*(sitemap\.xml)"',      f'\\1="{prefix}sitemap.xml"',  html)
+    html = re.sub(r'(href)="(?:\.\./)*(robots\.txt)"',       f'\\1="{prefix}robots.txt"',   html)
     return html
 
 # ── Usunięcie istniejącego switcher (jeśli już jest) ────────────────────────
@@ -168,11 +169,15 @@ def process_file(rel_path, lang_dir, deepl_lang, html_lang, flag, code):
 
     html = src.read_text(encoding="utf-8")
 
+    # Głębokość pliku docelowego względem SITE_ROOT (lang_dir/rel_path)
+    # np. de/index.html → depth=1, de/blog/index.html → depth=2
+    dst_depth = len(Path(lang_dir / rel_path if hasattr(rel_path, 'parts') else Path(lang_dir) / rel_path).parts)
+
     # Tłumacz
     translated = translate_html(html, deepl_lang)
 
     # Post-processing
-    translated = fix_asset_paths(translated)
+    translated = fix_asset_paths(translated, depth=dst_depth)
     translated = update_meta(translated, lang_dir, html_lang, rel_path)
     translated = add_hreflang(translated, rel_path)
     translated = inject_switcher(translated, flag, code)
