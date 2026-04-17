@@ -131,6 +131,11 @@
             margin-top: 8px;
         }
     </style>
+
+    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/polityka-prywatnosci.html">
+    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/polityka-prywatnosci.html">
+    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/polityka-prywatnosci.html">
+    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/polityka-prywatnosci.html">
 </head>
 <body>
 
@@ -149,6 +154,18 @@
                 <li><a href="blog/index.html">Blog</a></li>
             </ul>
             <a href="index.html#kontakt" class="nav-cta">Umów konsultację</a>
+            <div class="nav-lang" id="navLang">
+                <button class="nav-lang-btn" id="navLangBtn" aria-haspopup="true" aria-expanded="false">
+                    <img id="navLangFlag" class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15">
+                    <span id="navLangCode">PL</span>
+                    <svg class="nav-lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <div class="nav-lang-menu" id="navLangMenu">
+                    <a href="/" data-lang-link="pl" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15"> Polski</a>
+                    <a href="/de/" data-lang-link="de" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/de.png" srcset="https://flagcdn.com/40x30/de.png 2x" alt="DE" width="20" height="15"> Deutsch</a>
+                    <a href="/en/" data-lang-link="en" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x" alt="EN" width="20" height="15"> English</a>
+                </div>
+            </div>
             <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>

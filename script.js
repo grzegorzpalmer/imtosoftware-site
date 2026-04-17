@@ -1,3 +1,70 @@
+// === LANGUAGE SWITCHER + DOMAIN REDIRECT ===
+(function() {
+    var LANGS = {
+        pl: { flagSrc: 'https://flagcdn.com/20x15/pl.png', code: 'PL' },
+        de: { flagSrc: 'https://flagcdn.com/20x15/de.png', code: 'DE' },
+        en: { flagSrc: 'https://flagcdn.com/20x15/gb.png', code: 'EN' }
+    };
+
+    var path     = window.location.pathname;
+    var hostname = window.location.hostname;
+
+    // Ustal aktualny język z ścieżki URL
+    var currentLang = 'pl';
+    if (path.startsWith('/de/') || path === '/de') currentLang = 'de';
+    if (path.startsWith('/en/') || path === '/en') currentLang = 'en';
+
+    // Auto-redirect na podstawie domeny (tylko raz na sesję)
+    if (!sessionStorage.getItem('imto_lang_redirect')) {
+        sessionStorage.setItem('imto_lang_redirect', '1');
+        var domainLang = null;
+        if (hostname.endsWith('.de') && currentLang !== 'de') domainLang = 'de';
+        if ((hostname.endsWith('.com') || hostname.endsWith('.eu')) && currentLang !== 'en') domainLang = 'en';
+        if (domainLang) {
+            var basePath = path.replace(/^\/(de|en)\//, '/');
+            window.location.replace('/' + domainLang + basePath);
+            return;
+        }
+    }
+
+    // Aktualizuj przycisk przełącznika
+    var flagEl = document.getElementById('navLangFlag');
+    var codeEl = document.getElementById('navLangCode');
+    if (flagEl && LANGS[currentLang]) {
+        flagEl.src = LANGS[currentLang].flagSrc;
+        flagEl.alt = LANGS[currentLang].code;
+        codeEl.textContent = LANGS[currentLang].code;
+    }
+
+    // Buduj linki dla każdej opcji
+    var basePath = path.replace(/^\/(de|en)(\/|$)/, '/');
+    if (!basePath.startsWith('/')) basePath = '/' + basePath;
+    document.querySelectorAll('[data-lang-link]').forEach(function(el) {
+        var lang = el.getAttribute('data-lang-link');
+        if (lang === 'pl') {
+            el.href = basePath || '/';
+        } else {
+            el.href = '/' + lang + basePath;
+        }
+        if (lang === currentLang) el.classList.add('active');
+    });
+
+    // Obsługa dropdown
+    var btn  = document.getElementById('navLangBtn');
+    var menu = document.getElementById('navLangMenu');
+    if (btn && menu) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var isOpen = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', function() {
+            menu.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        });
+    }
+})();
+
 // === INTERSECTION OBSERVER (fade-in animations) ===
 const observerOptions = {
     threshold: 0.1,
