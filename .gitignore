@@ -15,6 +15,11 @@ Desktop.ini
 *.swo
 *~
 
+# Klucze API — nigdy nie commitować!
+deepl.key
+*.key
+.env
+
 # Logi i tymczasowe
 *.log
 *.tmp

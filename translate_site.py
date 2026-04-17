@@ -7,9 +7,17 @@ import os, re, time
 import requests
 from pathlib import Path
 
-SITE_ROOT = Path(r"C:\Users\GrzegorzPalmer\Documents\Claude\Projects\Strona IMTO Software")
-API_KEY   = "62e1a0a3-218a-4bc1-ad1a-afb2bc0ba14d:fx"
+SITE_ROOT = Path(__file__).parent   # folder ze skryptem = root serwisu
 API_URL   = "https://api-free.deepl.com/v2/translate"
+
+# Klucz DeepL czytany z pliku deepl.key (nie trafia do GitHuba)
+_key_file = SITE_ROOT / "deepl.key"
+if not _key_file.exists():
+    raise FileNotFoundError(
+        "Brak pliku deepl.key — wklej swój klucz DeepL do tego pliku.\n"
+        f"Oczekiwana lokalizacja: {_key_file}"
+    )
+API_KEY = _key_file.read_text(encoding="utf-8").strip()
 
 # (katalog, deepl_lang, html_lang, flag_code, etykieta)
 LANGS = [
