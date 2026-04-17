@@ -6,13 +6,26 @@
         en: { flagSrc: 'https://flagcdn.com/20x15/gb.png', code: 'EN' }
     };
 
-    var path     = window.location.pathname;
     var hostname = window.location.hostname;
+    var path     = window.location.pathname;
 
-    // Ustal aktualny język z ścieżki URL
+    // BASE: prefiks podkatalogu dla GitHub Pages project site.
+    // Na własnej domenie (imtosoftware.pl) BASE = ''.
+    var BASE = hostname.includes('github.io')
+        ? path.replace(/^(\/[^/]+).*/, '$1')   // np. '/imtosoftware-site'
+        : '';
+
+    // Ścieżka wewnątrz serwisu (bez BASE)
+    var sitePath = BASE ? (path.slice(BASE.length) || '/') : path;
+
+    // Ustal aktualny język z sitePath
     var currentLang = 'pl';
-    if (path.startsWith('/de/') || path === '/de') currentLang = 'de';
-    if (path.startsWith('/en/') || path === '/en') currentLang = 'en';
+    if (sitePath.startsWith('/de/') || sitePath === '/de') currentLang = 'de';
+    if (sitePath.startsWith('/en/') || sitePath === '/en') currentLang = 'en';
+
+    // Ścieżka treści (bez prefiksu językowego)
+    var contentPath = sitePath.replace(/^\/(de|en)(\/|$)/, '/') || '/';
+    if (!contentPath.startsWith('/')) contentPath = '/' + contentPath;
 
     // Auto-redirect na podstawie domeny (tylko raz na sesję)
     if (!sessionStorage.getItem('imto_lang_redirect')) {
@@ -21,8 +34,7 @@
         if (hostname.endsWith('.de') && currentLang !== 'de') domainLang = 'de';
         if ((hostname.endsWith('.com') || hostname.endsWith('.eu')) && currentLang !== 'en') domainLang = 'en';
         if (domainLang) {
-            var basePath = path.replace(/^\/(de|en)\//, '/');
-            window.location.replace('/' + domainLang + basePath);
+            window.location.replace(BASE + '/' + domainLang + contentPath);
             return;
         }
     }
@@ -37,15 +49,11 @@
     }
 
     // Buduj linki dla każdej opcji
-    var basePath = path.replace(/^\/(de|en)(\/|$)/, '/');
-    if (!basePath.startsWith('/')) basePath = '/' + basePath;
     document.querySelectorAll('[data-lang-link]').forEach(function(el) {
         var lang = el.getAttribute('data-lang-link');
-        if (lang === 'pl') {
-            el.href = basePath || '/';
-        } else {
-            el.href = '/' + lang + basePath;
-        }
+        el.href = lang === 'pl'
+            ? BASE + contentPath
+            : BASE + '/' + lang + contentPath;
         if (lang === currentLang) el.classList.add('active');
     });
 
