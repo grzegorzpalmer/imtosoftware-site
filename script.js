@@ -32,7 +32,6 @@
         sessionStorage.setItem('imto_lang_redirect', '1');
         var domainLang = null;
         if (hostname.endsWith('.de') && currentLang !== 'de') domainLang = 'de';
-        if ((hostname.endsWith('.com') || hostname.endsWith('.eu')) && currentLang !== 'en') domainLang = 'en';
         if (domainLang) {
             window.location.replace(BASE + '/' + domainLang + contentPath);
             return;
