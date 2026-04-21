@@ -28,12 +28,19 @@
     if (!contentPath.startsWith('/')) contentPath = '/' + contentPath;
 
     // Auto-redirect na podstawie domeny (tylko raz na sesję)
+    var params = new URLSearchParams(window.location.search);
+    var fromPl = params.get('from') === 'pl';
+
     if (!sessionStorage.getItem('imto_lang_redirect')) {
         sessionStorage.setItem('imto_lang_redirect', '1');
-        var domainLang = null;
-        if (hostname.endsWith('.de') && currentLang !== 'de') domainLang = 'de';
-        if (domainLang) {
-            window.location.replace(BASE + '/' + domainLang + contentPath);
+        if (fromPl) {
+            // Wejście z domeny .pl — zostajemy na polskiej wersji, czyścimy URL
+            history.replaceState({}, '', contentPath);
+        } else if (hostname.endsWith('.de') && currentLang !== 'de') {
+            window.location.replace(BASE + '/de' + contentPath);
+            return;
+        } else if ((hostname.endsWith('.com') || hostname.endsWith('.eu')) && currentLang !== 'en') {
+            window.location.replace(BASE + '/en' + contentPath);
             return;
         }
     }
