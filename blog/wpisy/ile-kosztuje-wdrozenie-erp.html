@@ -4,135 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej? | Blog IMTO Software</title>
-    <meta name="description" content="Cztery składniki kosztu, trzy przedziały cenowe, pułapki których nie widać w ofercie.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej? | Blog IMTO Software">
-    <meta property="og:description" content="Cztery składniki kosztu, trzy przedziały cenowe, pułapki których nie widać w ofercie.">
-    <meta property="og:url" content="https://imtosoftware.pl/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <meta property="og:image" content="https://imtosoftware.pl/images/logo-300x157.png">
-    <meta property="og:site_name" content="IMTO Software">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej? | Blog IMTO Software">
-    <meta name="twitter:description" content="Cztery składniki kosztu, trzy przedziały cenowe, pułapki których nie widać w ofercie.">
-    <link rel="canonical" href="https://imtosoftware.pl/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <link rel="icon" type="image/png" href="../../images/logo-300x157.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <style>
-        .post-hero{padding:140px 0 64px;text-align:center;position:relative;overflow:hidden}
-        .post-hero h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;line-height:1.15;margin:16px 0 24px;max-width:800px;margin-left:auto;margin-right:auto}
-        .post-back{display:inline-flex;align-items:center;gap:8px;color:var(--text-muted);font-size:.9rem;text-decoration:none;margin-bottom:32px;transition:color .2s}
-        .post-back:hover{color:var(--accent)}
-        .post-meta{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:8px}
-        .post-meta-date{color:var(--text-muted);font-size:.85rem}
-        .post-meta-tag{font-size:.75rem;font-weight:600;color:var(--accent);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em}
-        .post-body{max-width:720px;margin:0 auto;padding:72px 24px 80px}
-        .post-body h2{font-size:1.5rem;font-weight:700;margin:48px 0 18px;color:var(--text-primary)}
-        .post-body p{color:var(--text-muted);line-height:1.85;margin-bottom:22px;font-size:1.05rem}
-        .post-body ul,.post-body ol{color:var(--text-muted);line-height:1.8;padding-left:24px;margin-bottom:22px}
-        .post-body ul li,.post-body ol li{margin-bottom:10px;font-size:1.05rem}
-        .post-body strong{color:var(--text-primary);font-weight:600}
-        .post-cta{background:var(--bg-card);border:1px solid rgba(201,168,76,.2);border-radius:16px;padding:40px;text-align:center;margin:56px 0 0}
-        .post-cta h3{font-size:1.4rem;font-weight:700;margin-bottom:12px}
-        .post-cta p{color:var(--text-muted);margin-bottom:24px;font-size:.95rem}
+        .post-hero { padding: 140px 0 64px; text-align: center; position: relative; overflow: hidden; }
+        .post-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; margin: 16px 0 24px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .post-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; text-decoration: none; margin-bottom: 32px; transition: color 0.2s; }
+        .post-back:hover { color: var(--accent); }
+        .post-meta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+        .post-meta-date { color: var(--text-muted); font-size: 0.85rem; }
+        .post-meta-tag { font-size: 0.75rem; font-weight: 600; color: var(--accent); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .post-body { max-width: 720px; margin: 0 auto; padding: 72px 24px 80px; }
+        .post-body h2 { font-size: 1.5rem; font-weight: 700; margin: 48px 0 18px; color: var(--text-primary); }
+        .post-body p { color: var(--text-muted); line-height: 1.85; margin-bottom: 22px; font-size: 1.05rem; }
+        .post-body ul, .post-body ol { color: var(--text-muted); line-height: 1.8; padding-left: 24px; margin-bottom: 22px; }
+        .post-body ul li, .post-body ol li { margin-bottom: 10px; font-size: 1.05rem; }
+        .post-body strong { color: var(--text-primary); font-weight: 600; }
+        .post-cta { background: var(--bg-card); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 40px; text-align: center; margin: 56px 0 0; }
+        .post-cta h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+        .post-cta p { color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem; }
     </style>
-
-    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/blog/wpisy/ile-kosztuje-wdrozenie-erp.html">
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wekaeoaefi");
-    </script>
 </head>
 <body>
-    <nav class="nav"><div class="nav-inner"><a href="../../index.html" class="nav-logo"><img src="../../images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img"></a><ul class="nav-links"><li><a href="../../index.html#uslugi">Usługi</a></li><li><a href="../../index.html#realizacje">Realizacje</a></li><li><a href="../../index.html#branze">Branże</a></li><li><a href="../../index.html#proces">Jak pracujemy</a></li><li><a href="../../o-nas.html">O nas</a></li><li><a href="../index.html" style="color:var(--accent)">Blog</a></li></ul><a href="../../index.html#kontakt" class="nav-cta">Umów konsultację</a><div class="nav-lang" id="navLang">
-                <button class="nav-lang-btn" id="navLangBtn" aria-haspopup="true" aria-expanded="false">
-                    <img id="navLangFlag" class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15">
-                    <span id="navLangCode">PL</span>
-                    <svg class="nav-lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                </button>
-                <div class="nav-lang-menu" id="navLangMenu">
-                    <a href="/" data-lang-link="pl" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15"> Polski</a>
-                    <a href="/de/" data-lang-link="de" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/de.png" srcset="https://flagcdn.com/40x30/de.png 2x" alt="DE" width="20" height="15"> Deutsch</a>
-                    <a href="/en/" data-lang-link="en" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x" alt="EN" width="20" height="15"> English</a>
-                </div>
-            </div>
-            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
-    <div class="nav-mobile-menu" id="navMobileMenu"><a href="../../index.html#uslugi">Usługi</a><a href="../../index.html#realizacje">Realizacje</a><a href="../../index.html#branze">Branże</a><a href="../../index.html#proces">Jak pracujemy</a><a href="../../o-nas.html">O nas</a><a href="../index.html">Blog</a><a href="../../index.html#kontakt" class="nav-mobile-cta">Umów konsultację →</a></div>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../../index.html" class="nav-logo">
+                <div class="nav-logo-mark"><span class="nav-logo-text">imto</span><span class="nav-logo-sub">software</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#uslugi">Usługi</a></li>
+                <li><a href="../../index.html#realizacje">Realizacje</a></li>
+                <li><a href="../../index.html#branze">Branże</a></li>
+                <li><a href="../../index.html#proces">Jak pracujemy</a></li>
+                <li><a href="../../o-nas.html">O nas</a></li>
+                <li><a href="../index.html" style="color: var(--accent);">Blog</a></li>
+            </ul>
+            <a href="../../index.html#kontakt" class="nav-cta">Umów konsultację</a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+        <a href="../../index.html#uslugi">Usługi</a>
+        <a href="../../index.html#realizacje">Realizacje</a>
+        <a href="../../index.html#branze">Branże</a>
+        <a href="../../index.html#proces">Jak pracujemy</a>
+        <a href="../../o-nas.html">O nas</a>
+        <a href="../index.html">Blog</a>
+        <a href="../../index.html#kontakt" class="nav-mobile-cta">Umów konsultację →</a>
+    </div>
 
     <section class="post-hero">
-        <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"><div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,.07) 0%,transparent 70%);"></div></div>
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"><div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,0.07) 0%,transparent 70%);"></div></div>
         <div class="container" style="position:relative;z-index:1;">
             <a href="../index.html" class="post-back">← Powrót do bloga</a>
-            <h1>Ile naprawdę kosztuje wdrożenie ERP<br>w małej firmie produkcyjnej?</h1>
+            <h1>Ile naprawdę kosztuje wdrożenie ERP w małej firmie produkcyjnej?</h1>
             <div class="post-meta">
-                <span class="post-meta-date">15 grudnia 2025</span>
+                <span class="post-meta-date">1 maja 2026</span>
                 <span class="post-meta-tag">ERP</span>
                 <span class="post-meta-tag">Koszty</span>
+                <span class="post-meta-tag">Produkcja</span>
                 <span class="post-meta-tag">MŚP</span>
             </div>
         </div>
     </section>
 
     <div class="post-body">
-        <p>„Wdrożenie ERP kosztuje tyle, ile wynosi budżet obronny małego kraju" — to przekonanie krąży wśród właścicieli małych firm produkcyjnych od lat. I nie bez powodu. Wielkie systemy dla korporacji, wielkie projekty, wielkie faktury. Ale czy to musi tak wyglądać w firmie zatrudniającej 20–80 osób?</p>
-        <p>Rozbijamy temat na czynniki pierwsze — bez owijania w bawełnę.</p>
+        <p>„Ile to kosztuje?" — to pierwsze pytanie, które zadaje niemal każdy właściciel firmy, gdy temat ERP pojawia się na stole. I niestety odpowiedź rzadko jest prosta. Dostawcy mówią o „kilkudziesięciu tysiącach", a po roku okazuje się, że rachunek opiewa na trzy razy tyle. Skąd ta różnica?</p>
 
-        <h2>Co wchodzi w skład „kosztu ERP"?</h2>
-        <p>Większość właścicieli firm myśli o koszcie licencji. To błąd — licencja to często mniejsza część wydatku. Prawdziwy koszt wdrożenia składa się z czterech elementów:</p>
+        <p>W tym artykule rozbijamy rzeczywisty koszt wdrożenia ERP na czynniki pierwsze — tak, żebyś mógł porównywać oferty uczciwie i nie dał się zaskoczyć pozycjami, których nikt nie pokazuje w pierwszej prezentacji.</p>
+
+        <h2>Cztery składniki kosztu, których nikt nie łączy razem</h2>
+
+        <p>Kiedy dostawca podaje cenę, najczęściej mówi tylko o licencji lub abonamencie. Tymczasem całkowity koszt wdrożenia ERP składa się z czterech osobnych elementów:</p>
+
         <ul>
-            <li><strong>Licencja lub opłata za dostęp</strong> — w modelach SaaS to miesięczna subskrypcja per użytkownik (typowo 50–200 zł/miesiąc za osobę). W systemach dedykowanych płacisz raz za oprogramowanie.</li>
-            <li><strong>Wdrożenie i konfiguracja</strong> — analiza procesów, konfiguracja systemu pod firmę, migracja danych. To często 60–70% całego kosztu projektu.</li>
-            <li><strong>Szkolenia</strong> — pracownicy muszą nauczyć się nowego narzędzia. Niedoszacowany element, który potrafi być źródłem największych opóźnień.</li>
-            <li><strong>Utrzymanie i support</strong> — miesięczny koszt opieki technicznej, aktualizacji, pomocy przy problemach. Często pomijany na etapie budżetowania.</li>
+            <li><strong>Licencja lub abonament</strong> — jednorazowy zakup licencji albo miesięczny SaaS. To ta pozycja, którą wszyscy podają jako „cenę systemu".</li>
+            <li><strong>Koszt wdrożenia</strong> — płacisz firmie za dostosowanie systemu do Twoich procesów: mapowanie przepływów, konfigurację, migrację danych, pisanie raportów na miarę. To często <strong>największa pozycja w budżecie</strong> — i ta, która potrafi urosnąć.</li>
+            <li><strong>Szkolenia</strong> — każdy pracownik, który będzie korzystał z systemu, musi się nauczyć nowego narzędzia. W firmie 20-osobowej to realne 2–4 tygodnie obniżonej wydajności całego zespołu.</li>
+            <li><strong>Utrzymanie i wsparcie</strong> — aktualizacje, helpdesk, poprawki po zmianach w prawie (nowe JPK, e-faktura, zmiany VAT). Roczny koszt utrzymania to zazwyczaj 15–25% wartości wdrożenia.</li>
         </ul>
 
-        <h2>Ile to kosztuje w liczbach?</h2>
-        <p>Dla małej firmy produkcyjnej (20–50 pracowników, 5–15 użytkowników systemu) możemy mówić o trzech przedziałach:</p>
+        <h2>Ile to realnie kosztuje? Trzy przedziały cenowe</h2>
+
+        <p>Rynek ERP dla małych firm produkcyjnych jest bardzo rozciągnięty. Generalnie można wyróżnić trzy przedziały:</p>
+
         <ul>
-            <li><strong>Gotowy SaaS (np. Comarch ERP Optima, Symfonia)</strong> — wdrożenie 15 000–40 000 zł + subskrypcja 500–2 000 zł/miesiąc. Szybki start, ale ograniczenia konfiguracyjne.</li>
-            <li><strong>System pół-dedykowany (mocno skonfigurowany gotowiec)</strong> — wdrożenie 40 000–100 000 zł + utrzymanie. Lepiej dopasowany, ale nadal kompromisowy.</li>
-            <li><strong>System w pełni dedykowany</strong> — od 80 000 zł wzwyż, bez górnej granicy zależnej od złożoności. Drożej na starcie, taniej w długim terminie, pełne dopasowanie do procesów.</li>
+            <li><strong>20 000–60 000 zł</strong> — gotowe systemy SaaS (np. Comarch ERP Optima, Subiekt GT, mniejsze rozwiązania chmurowe) z podstawową konfiguracją. Pasują do firm, których procesy są standardowe i nie potrzebują dużych modyfikacji. Uwaga: przy mocnej rozbudowie szybko wychodzą poza ten zakres.</li>
+            <li><strong>80 000–250 000 zł</strong> — systemy średniej klasy (SAP Business One, Comarch ERP XL, Epicor) z pełnym wdrożeniem, migracją danych i szkoleniami. To najczęstszy zakres dla firm produkcyjnych zatrudniających 15–100 osób.</li>
+            <li><strong>300 000 zł i więcej</strong> — duże systemy klasy enterprise lub projekty silnie indywidualne. Dla większości MŚP zupełnie poza zasięgiem i potrzebami.</li>
         </ul>
-        <p>Gdzie jest granica opłacalności? Najprościej: jeśli Twoi pracownicy łącznie tracą ponad 30–40 godzin tygodniowo na ręczne wprowadzanie danych, przepisywanie między arkuszami i szukanie informacji — system zwraca się w 12–24 miesiące nawet przy wyższym budżecie wdrożeniowym.</p>
+
+        <p>Warto dodać, że <strong>dedykowane oprogramowanie</strong> — budowane od zera pod konkretny proces — potrafi zmieścić się w przedziale środkowym, jednocześnie znacznie lepiej odpowiadając na specyficzne potrzeby firmy niż dopasowywany z trudem gotowy system.</p>
 
         <h2>Pułapki, których nie widać w ofercie</h2>
-        <p>Firmy wdrożeniowe rzadko mówią głośno o kilku kosztach, które regularnie zaskakują klientów:</p>
+
+        <p>Oto cztery koszty ukryte, które najczęściej zaskakują właścicieli firm w trakcie lub po wdrożeniu:</p>
+
         <ul>
-            <li><strong>Migracja danych</strong> — przeniesienie historii sprzedaży, stanów magazynowych i bazy klientów z Excela lub starego systemu. Potrafi kosztować tyle co samo wdrożenie.</li>
-            <li><strong>Integracje z innymi systemami</strong> — połączenie ERP z systemem e-commerce, programem do fakturowania, skanerami magazynowymi. Każda integracja to dodatkowy budżet.</li>
-            <li><strong>Czas Twoich ludzi</strong> — wdrożenie angażuje nie tylko firmę IT, ale też Twoich pracowników. Tygodnie spotkań, testów, wprowadzania danych. To realny koszt, choć niewidoczny na fakturze.</li>
-            <li><strong>Zmiany w trakcie projektu</strong> — „a dorzućmy jeszcze..." To najczęstsze zdanie na projektach IT i najszybsza droga do przekroczenia budżetu.</li>
+            <li><strong>Migracja danych</strong> — przeniesienie historii z Excela, starego programu lub papierowych dokumentów do nowego systemu. Często wyceniana osobno i mocno niedoszacowana. Przy dużych bazach danych koszt migracji może wynieść 10 000–40 000 zł.</li>
+            <li><strong>Integracje</strong> — ERP sam w sobie nic nie wie o Twoim sklepie online, systemie magazynowym, maszynach na hali czy aplikacji kurierskiej. Każde połączenie to dodatkowy projekt. Jedno API to zazwyczaj 5 000–20 000 zł.</li>
+            <li><strong>Dostosowania (customizacje)</strong> — „Mamy specyficzny proces rozliczania produkcji, który musi wyglądać inaczej niż standard." Każda taka zmiana to godziny pracy programistów, a ich liczba rośnie w trakcie projektu.</li>
+            <li><strong>Koszt czasu Twoich ludzi</strong> — ktoś musi pracować z dostawcą, testować system, szkolić się i opisywać procesy. Przy wdrożeniu ERP lider projektu po stronie firmy spędza na tym <strong>30–50% czasu pracy</strong> przez kilka miesięcy. To też pieniądz.</li>
         </ul>
 
         <h2>Jak nie przepłacić?</h2>
-        <p>Kilka zasad, które działają:</p>
+
+        <p>Kilka zasad, które pomogą Ci kontrolować budżet:</p>
+
         <ul>
-            <li>Zanim zaczniesz rozmawiać z dostawcami, zmapuj swoje procesy. Wiesz, co chcesz zmienić — możesz ocenić, czy oferta to adresuje.</li>
-            <li>Negocjuj zakres, nie cenę. Lepiej wdrożyć mniej za rozsądne pieniądze niż przepłacić za funkcje, których nie użyjesz.</li>
-            <li>Zażądaj referencji z firm o podobnej skali i branży. „Wdrożyliśmy u dużej korporacji" nie znaczy, że poradzą sobie z 30-osobową produkcją.</li>
-            <li>Zaplanuj budżet na „po wdrożeniu" — pierwsze 3 miesiące użytkowania generują wnioski o poprawki. Dobrzy partnerzy technologiczni zostają i reagują.</li>
+            <li><strong>Zanim kupisz — opisz procesy.</strong> Firma, która wie, jak u niej przebiega realizacja zamówienia od złożenia do wysyłki, kupuje znacznie taniej. Dostawca nie musi odkrywać Ameryki i nie fakturuje za każde spotkanie.</li>
+            <li><strong>Pytaj o całkowity koszt 3-letni.</strong> Licencja plus wdrożenie plus utrzymanie w ciągu 3 lat — to uczciwa miara do porównywania ofert.</li>
+            <li><strong>Zacznij od małego wdrożenia.</strong> Nie musisz wdrażać wszystkich modułów naraz. Zacznij od produkcji i magazynu, dodaj sprzedaż w kolejnym kroku. Łatwiej kontrolować budżet i ryzyko.</li>
+            <li><strong>Sprawdź referencje — od firm podobnych do Twojej.</strong> Nie od firmy 10× większej. Dopytaj: czy projekt zmieścił się w budżecie? Co poszło nie tak?</li>
         </ul>
 
-        <h2>Podsumowanie</h2>
-        <p>Wdrożenie ERP w małej firmie produkcyjnej nie musi oznaczać wielomilionowego projektu. Kluczem jest dobre zdefiniowanie tego, co naprawdę chcesz zmienić — i wybór partnera, który rozumie Twoje procesy, a nie tylko swój katalog produktów.</p>
-        <p>Zanim podpiszesz umowę, warto porozmawiać z kimś, kto wdrażał systemy w firmach podobnych do Twojej. 15 minut rozmowy może oszczędzić miesięcy frustracji.</p>
+        <h2>A może dedykowany system jest tańszy niż ERP?</h2>
+
+        <p>To pytanie, które coraz częściej pojawia się w rozmowach z właścicielami firm. I odpowiedź bywa zaskakująca: <strong>tak, dla wielu MŚP dedykowane oprogramowanie wychodzi taniej i lepiej niż wdrożenie dużego ERP.</strong></p>
+
+        <p>Dlaczego? Bo płacisz tylko za to, czego naprawdę potrzebujesz. Nie ma modułów, których nigdy nie użyjesz. Nie ma licencji na funkcje, które dla Ciebie nie mają sensu. System jest zbudowany pod Twój proces, a nie odwrotnie — Twój proces pod system.</p>
+
+        <p>Oczywiście dedykowane oprogramowanie ma swoje minusy: wymaga więcej czasu na start, wymaga dobrego partnera technicznego i nie ma gotowej bazy wiedzy jak duże systemy. Ale dla firmy o specyficznych potrzebach — a produkcja prawie zawsze taka jest — może to być po prostu lepsza decyzja biznesowa.</p>
+
+        <h2>Podsumowanie w liczbach</h2>
+
+        <p>Zakładając wdrożenie ERP klasy średniej w firmie produkcyjnej zatrudniającej 25–40 osób, realny budżet całościowy na 3 lata to zazwyczaj <strong>150 000–350 000 zł</strong> — wliczając licencje, wdrożenie, szkolenia, utrzymanie i najczęstsze integracje. Jeśli oferta, którą dostałeś, mieści się w 40 000 zł, zapytaj wprost: co nie jest wliczone w tę cenę?</p>
+
+        <p>Dobry partner IT powinien pokazać Ci pełny obraz kosztów zanim podpiszesz umowę — nie po fakcie. Jeśli tak nie jest, to jest już pierwszy sygnał ostrzegawczy.</p>
 
         <div class="post-cta">
-            <h3>Zastanawiasz się nad ERP dla swojej firmy?</h3>
-            <p>Powiemy Ci wprost, czy w Twoim przypadku system dedykowany ma sens, czy lepszy będzie gotowiec — i ile realnie to może kosztować.</p>
+            <h3>Chcesz wdrożyć to w swojej firmie?</h3>
+            <p>Bezpłatna 15-minutowa rozmowa — bez zobowiązań. Powiemy Ci, gdzie w Twoim biznesie jest największy potencjał.</p>
             <a href="../../index.html#kontakt" class="btn btn-primary">Zarezerwuj bezpłatne 15 minut →</a>
         </div>
     </div>
 
-    <footer><div class="container"><div class="footer-content"><div class="footer-column"><h4>IMTO Software</h4><p style="color:var(--text-muted);font-size:.95rem;">AI-Powered Software House dla MŚP i firm produkcyjnych.</p></div><div class="footer-column"><h4>Usługi</h4><ul><li><a href="../../index.html#uslugi">AI Agenci</a></li><li><a href="../../index.html#uslugi">Integracja Systemów</a></li><li><a href="../../index.html#uslugi">Dedykowane Oprogramowanie</a></li></ul></div><div class="footer-column"><h4>Firma</h4><ul><li><a href="../../o-nas.html">O nas</a></li><li><a href="../../realizacje/index.html">Realizacje</a></li><li><a href="../index.html">Blog</a></li></ul></div><div class="footer-column"><h4>Kontakt</h4><ul><li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li><li><a href="tel:+48500263639">+48 500 26 36 39</a></li><li style="margin-top:16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="footer-bottom"><div class="footer-copyright">&copy; 2026 IMTO Software. &nbsp;·&nbsp; <a href="../../polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;">Polityka prywatności</a></div></div></div></footer>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column"><h4>IMTO Software</h4><p style="color:var(--text-muted);font-size:0.95rem;">AI-Powered Software House dla MŚP i firm produkcyjnych.</p></div>
+                <div class="footer-column"><h4>Usługi</h4><ul><li><a href="../../index.html#uslugi">AI Agenci</a></li><li><a href="../../index.html#uslugi">Integracja Systemów</a></li><li><a href="../../index.html#uslugi">Dedykowane Oprogramowanie</a></li></ul></div>
+                <div class="footer-column"><h4>Firma</h4><ul><li><a href="../../o-nas.html">O nas</a></li><li><a href="../../realizacje/index.html">Realizacje</a></li><li><a href="../index.html">Blog</a></li></ul></div>
+                <div class="footer-column"><h4>Kontakt</h4><ul><li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li><li><a href="tel:+48500263639">+48 500 26 36 39</a></li><li style="margin-top:16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><div class="footer-copyright">&copy; 2026 IMTO Software. &nbsp;·&nbsp; <a href="../../polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;">Polityka prywatności</a></div></div>
+        </div>
+    </footer>
     <script src="../../script.js"></script>
 </body>
 </html>
