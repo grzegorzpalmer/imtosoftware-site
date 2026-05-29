@@ -45,6 +45,7 @@
         .case-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 24px; border-top: 1px solid var(--border-color); max-width: 760px; margin: 0 auto; gap: 16px; }
         .case-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
         .case-nav a:hover { color: var(--accent); }
+        .badge-live { display: inline-block; background: rgba(72,180,90,0.15); border: 1px solid #48b45a; color: #48b45a; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; margin-left: 12px; }
         .badge-mvp { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; margin-left: 12px; }
         @media (max-width: 600px) { .case-metrics { grid-template-columns: 1fr 1fr; } }
     </style>
@@ -115,7 +116,7 @@
                 <span class="case-tag-pill">SaaS</span>
                 <span class="case-tag-pill">Produkcja</span>
             </div>
-            <h1>Deadstocks.ai — zamieniamy<br>zalegający towar w przychód <span class="badge-mvp">MVP</span></h1>
+            <h1>Deadstocks.ai — zamieniamy<br>zalegający towar w przychód <span class="badge-live">Gotowe wdrożenie</span></h1>
             <p style="color:var(--text-muted);font-size:1.1rem;max-width:660px;margin:0 auto;line-height:1.7;">Globalny marketplace B2B zasilany przez AI, który łączy systemy ERP producentów z kupującymi i automatyzuje sprzedaż nadwyżek magazynowych — od listingu, przez wycenę, po dopasowanie kupującego.</p>
             <div class="case-cover">
                 <img loading="lazy" src="../images/ds.png" alt="Deadstocks.ai — platforma B2B likwidacji nadwyżek">
@@ -161,12 +162,12 @@
         <p>Platforma działa jako aplikacja webowa SaaS wdrożona na Microsoft Azure (Azure Web Apps). Architektura oparta jest o mikroserwisy z dedykowanym pipeline'em przetwarzania danych ERP, modułem AI do generowania opisów i wyceny, oraz warstwą matchingu kupujących opartą na analizie behawioralnej.</p>
 
         <h2>Status projektu</h2>
-        <p>Projekt jest aktualnie na etapie <strong>MVP</strong> — działające środowisko potwierdza kluczowe założenia produktu: automatyczne generowanie listingów z danych ERP, dynamiczne wycenianie i matching kupujących. Trwają prace nad docelową wersją platformy, która obejmie pełną integrację z czołowymi systemami ERP, zaawansowany moduł analityczny oraz rozbudowane możliwości publikacji na marketplace'ach B2B. Strona marketingowa projektu dostępna jest pod adresem <a href="https://www.deadstocks.ai" target="_blank" rel="noopener" style="color:var(--accent);">deadstocks.ai</a>.</p>
+        <p>Projekt jest wdrożony produkcyjnie — działające środowisko potwierdza kluczowe założenia produktu: automatyczne generowanie listingów z danych ERP, dynamiczne wycenianie i matching kupujących. Trwają prace nad docelową wersją platformy, która obejmie pełną integrację z czołowymi systemami ERP, zaawansowany moduł analityczny oraz rozbudowane możliwości publikacji na marketplace'ach B2B. Strona marketingowa projektu dostępna jest pod adresem <a href="https://www.deadstocks.ai" target="_blank" rel="noopener" style="color:var(--accent);">deadstocks.ai</a>.</p>
         <p>Rozwijamy go jako własny produkt — IMTO Software odpowiada za całość: architekturę, development, integracje AI oraz wdrożenie na platformie Azure.</p>
 
         <h2>Efekty (w trakcie realizacji)</h2>
         <ul>
-            <li>MVP zweryfikowany w działającym środowisku produkcyjnym na Microsoft Azure</li>
+            <li>Wdrożony produkcyjnie na Microsoft Azure</li>
             <li>Zero ręcznego wprowadzania danych — AI-driven pipeline przetwarza eksporty ERP, pliki BOM i katalogi PDF</li>
             <li>Możliwość listowania tysięcy pozycji w minutach zamiast tygodniach</li>
             <li>Integracje z SAP S/4HANA, Comarch ERP, Sage Symfonia, Microsoft Dynamics 365 i Streamsoft Navireo w przygotowaniu</li>
