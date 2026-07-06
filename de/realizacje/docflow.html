@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocFlow AI · Fallstudie | IMTO Software</title>
+    <meta name="description" content="DocFlow AI — intelligente Extraktion und Klassifizierung von Betriebsdokumenten. Automatische Felderkennung, Weiterleitung an Module (Arbeitsschutz, HR, Projekte), ERP-Export.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DocFlow AI — Extraktion und Klassifizierung von Betriebsdokumenten | IMTO Software">
+    <meta property="og:description" content="DocFlow AI — intelligente Extraktion und Klassifizierung von Betriebsdokumenten. Automatische Felderkennung, Weiterleitung an Module (Arbeitsschutz, HR, Projekte), ERP-Export.">
+    <meta property="og:url" content="https://imtosoftware.pl/de/realizacje/docflow.html">
+    <meta property="og:image" content="https://imtosoftware.pl/images/docflow.png">
+    <meta property="og:site_name" content="IMTO Software">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DocFlow AI — Extraktion und Klassifizierung von Betriebsdokumenten | IMTO Software">
+    <meta name="twitter:description" content="DocFlow AI — intelligente Extraktion und Klassifizierung von Dokumenten. Automatische Felderkennung, Weiterleitung an Module.">
+    <link rel="canonical" href="https://imtosoftware.pl/de/realizacje/docflow.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../images/favicon-512.png">
+    <link rel="apple-touch-icon" href="../../images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .case-hero { padding: 140px 0 80px; text-align: center; position: relative; overflow: hidden; }
+        .case-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin: 16px 0 24px; }
+        .case-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; text-decoration: none; margin-bottom: 32px; transition: color 0.2s; }
+        .case-back:hover { color: var(--accent); }
+        .case-cover { width: 100%; max-width: 900px; margin: 40px auto 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); background: #f4f4f6; }
+        .case-cover img { width: 100%; height: auto; display: block; }
+        .case-body { max-width: 760px; margin: 0 auto; padding: 80px 24px; }
+        .case-body h2 { font-size: 1.75rem; font-weight: 700; margin: 56px 0 20px; color: var(--text-primary); }
+        .case-body h2:first-of-type { margin-top: 0; }
+        .case-body p { color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem; }
+        .case-body ul { color: var(--text-muted); line-height: 1.8; padding-left: 24px; margin-bottom: 20px; }
+        .case-body ul li { margin-bottom: 8px; font-size: 1.05rem; }
+        .case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 48px 0; }
+        .case-metric { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px 24px; text-align: center; }
+        .case-metric-num { font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+        .case-metric-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; }
+        .case-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 40px; justify-content: center; }
+        .case-tag-pill { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); color: var(--accent); font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .case-quote { border-left: 3px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: var(--bg-card); border-radius: 0 12px 12px 0; }
+        .case-quote p { color: var(--text-primary); font-style: italic; font-size: 1.1rem; margin: 0; }
+        .case-cta-section { text-align: center; padding: 80px 24px; background: var(--bg-card); border-top: 1px solid var(--border-color); }
+        .case-nav { display: flex; justify-content: space-between; align-items: center; padding: 48px 24px; border-top: 1px solid var(--border-color); max-width: 760px; margin: 0 auto; gap: 16px; }
+        .case-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .case-nav a:hover { color: var(--accent); }
+        .badge-mvp { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.08em; vertical-align: middle; margin-left: 12px; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 32px 0; }
+        .feature-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; }
+        .feature-card h4 { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+        .feature-card p { font-size: 0.9rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+        .integrations-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 8px; }
+        .integration-pill { background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); font-size: 0.8rem; font-weight: 600; padding: 6px 14px; border-radius: 8px; }
+        @media (max-width: 600px) { .case-metrics { grid-template-columns: 1fr 1fr; } .feature-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/realizacje/docflow.html">
+    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/realizacje/docflow.html">
+    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/realizacje/docflow.html">
+    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/realizacje/docflow.html">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <img src="../../images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#uslugi">Dienstleistungen</a></li>
+                <li><a href="../index.html#realizacje" style="color: var(--accent);">Projekte</a></li>
+                <li><a href="../index.html#branze">Branchen</a></li>
+                <li><a href="../index.html#proces">Wie wir arbeiten</a></li>
+                <li><a href="../o-nas.html">Über uns</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+            </ul>
+            <a href="../index.html#kontakt" class="nav-cta">Beratungstermin vereinbaren</a>
+            <div class="nav-lang" id="navLang">
+                <button class="nav-lang-btn" id="navLangBtn" aria-haspopup="true" aria-expanded="false">
+                    <img id="navLangFlag" class="nav-lang-flag" src="https://flagcdn.com/20x15/de.png" srcset="https://flagcdn.com/40x30/de.png 2x" alt="DE" width="20" height="15">
+                    <span id="navLangCode">DE</span>
+                    <svg class="nav-lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <div class="nav-lang-menu" id="navLangMenu">
+                    <a href="/" data-lang-link="pl" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15"> Polski</a>
+                    <a href="/de/" data-lang-link="de" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/de.png" srcset="https://flagcdn.com/40x30/de.png 2x" alt="DE" width="20" height="15"> Deutsch</a>
+                    <a href="/en/" data-lang-link="en" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x" alt="EN" width="20" height="15"> English</a>
+                </div>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+        <a href="../index.html#uslugi">Dienstleistungen</a>
+        <a href="../index.html#realizacje">Projekte</a>
+        <a href="../index.html#branze">Branchen</a>
+        <a href="../index.html#proces">Wie wir arbeiten</a>
+        <a href="../o-nas.html">Über uns</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../index.html#kontakt" class="nav-mobile-cta">Termin vereinbaren →</a>
+    </div>
+
+    <section class="case-hero">
+        <div style="position:absolute;top:0;left:0;width:100%;height:auto;z-index:0;pointer-events:none;">
+            <div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,0.07) 0%,transparent 70%);"></div>
+        </div>
+        <div class="container" style="position:relative;z-index:1;">
+            <a href="../index.html#realizacje" class="case-back">← Zurück zu den Projekten</a>
+            <div class="case-tags">
+                <span class="case-tag-pill">Künstliche Intelligenz</span>
+                <span class="case-tag-pill">OCR / NLP</span>
+                <span class="case-tag-pill">Dokumentenworkflow</span>
+                <span class="case-tag-pill">ERP-Integrationen</span>
+                <span class="case-tag-pill">Azure</span>
+            </div>
+            <h1>DocFlow AI — intelligente Extraktion<br>und Klassifizierung von Betriebsdokumenten <span class="badge-mvp">Pilotprojekt</span></h1>
+            <p style="color:var(--text-muted);font-size:1.1rem;max-width:680px;margin:0 auto;line-height:1.7;">Ein KI-System, das Betriebsdokumente liest — Arbeitsschutzprotokolle, Arbeitszeitkarten, Abnahmeprotokolle, Serviceaufträge — die Struktur erkennt, Felder mit Konfidenzwert extrahiert und die Daten automatisch an die richtigen Module weiterleitet: HR, Arbeitsschutz, Projekte, Finanzen.</p>
+            <div class="case-cover">
+                <img loading="lazy" src="../../images/docflow.png" alt="DocFlow AI — Dashboard zur Dokumentenanalyse">
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots gallery -->
+    <section style="background:var(--bg-card);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color);padding:56px 0;">
+        <div class="container">
+            <p style="text-align:center;color:var(--accent);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">Ansichten der Anwendung</p>
+            <h2 style="text-align:center;font-size:1.5rem;font-weight:800;margin-bottom:40px;color:var(--text-primary);">DocFlow AI in Aktion</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+                <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+                    <img loading="lazy" src="../../images/docflow_pulpit.png" alt="DocFlow AI — Hauptdashboard" style="width:100%;height:auto;display:block;background:#f4f4f6;">
+                    <div style="padding:14px 16px;background:var(--bg-card);">
+                        <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary);margin:0;">Hauptdashboard</p>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin:4px 0 0;">System-KPIs, Weiterleitung von Feldern an Module, Datenqualität und letzte Aktivitäten</p>
+                    </div>
+                </div>
+                <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+                    <img loading="lazy" src="../../images/docflow_wczytaj.png" alt="DocFlow AI — Hochladen von Dokumenten" style="width:100%;height:auto;display:block;background:#f4f4f6;">
+                    <div style="padding:14px 16px;background:var(--bg-card);">
+                        <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary);margin:0;">Hochladen von Dokumenten</p>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin:4px 0 0;">Drag &amp; Drop, Warteschlange und Demo-Szenarien: Arbeitsschutz, Abnahmeprotokoll, Arbeitszeitkarte, Dienstreise</p>
+                    </div>
+                </div>
+                <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+                    <img loading="lazy" src="../../images/docflow_analiza.png" alt="DocFlow AI — Ergebnis der Dokumentenanalyse" style="width:100%;height:auto;display:block;background:#f4f4f6;">
+                    <div style="padding:14px 16px;background:var(--bg-card);">
+                        <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary);margin:0;">Ergebnis der Dokumentenanalyse</p>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin:4px 0 0;">Dokumentenvorschau neben den erkannten Feldern mit individuellem Konfidenzwert</p>
+                    </div>
+                </div>
+                <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+                    <img loading="lazy" src="../../images/docflow_moduly.png" alt="DocFlow AI — Weiterleitung an Module und Warnungen" style="width:100%;height:auto;display:block;background:#f4f4f6;">
+                    <div style="padding:14px 16px;background:var(--bg-card);">
+                        <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary);margin:0;">Module, Warnungen und empfohlene Maßnahmen</p>
+                        <p style="font-size:0.8rem;color:var(--text-muted);margin:4px 0 0;">Automatische Zuordnung von Feldern zu HR/Arbeitsschutz, Liste der Warnungen und operativen Maßnahmen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="case-body">
+        <div class="case-metrics">
+            <div class="case-metric">
+                <div class="case-metric-num">94%</div>
+                <div class="case-metric-label">durchschnittliche Konfidenz bei der Dokumentenklassifizierung und Erkennung der Schlüsselfelder</div>
+            </div>
+            <div class="case-metric">
+                <div class="case-metric-num">4,9 s</div>
+                <div class="case-metric-label">durchschnittliche Zeit für die Extraktion und KI-Analyse eines Dokuments</div>
+            </div>
+            <div class="case-metric">
+                <div class="case-metric-num">12</div>
+                <div class="case-metric-label">unterstützte Formate: PDF, JPG, PNG, HEIC, DOCX, TIFF und weitere</div>
+            </div>
+        </div>
+
+        <h2>Herausforderung</h2>
+        <p>Betriebsunternehmen — aus Produktion, Installation, Service, Bauwesen — erzeugen täglich Dutzende Dokumente: Arbeitsschutzprotokolle, Arbeitszeiterfassungskarten, Abnahmeprotokolle, Serviceaufträge, Dienstreiseanordnungen, Reisekostenabrechnungen, Fahrzeugreparaturkarten. Jedes in einem anderen Layout, teils handschriftlich ausgefüllt, teils als PDF, teils als Handyfoto. Die Daten existieren — fließen aber nicht automatisch dorthin, wo sie gebraucht werden.</p>
+        <p>Klassische OCR-Tools versagen, weil sie Vorlagen benötigen. Ein neues Spaltenlayout, ein anderer Arbeitgeber, andere Feldbezeichnungen — und alles muss neu beschrieben werden. Personal-, Arbeitsschutzabteilungen und Projektleiter verbringen wöchentlich Dutzende Stunden mit dem manuellen Übertragen von Daten von Papier in Systeme. Das ist Zeit, die keinen Mehrwert schafft und eine Fehlerquelle darstellt.</p>
+
+        <h2>Lösung</h2>
+        <p>Wir haben <strong>DocFlow AI</strong> entwickelt — eine KI-Plattform, die die Struktur von Betriebsdokumenten versteht und den gesamten Zyklus automatisiert: vom Hochladen der Datei über die Klassifizierung des Typs und die Feldextraktion bis zur Weiterleitung der Daten an die passenden Geschäftsmodule und ERP-Systeme.</p>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Klassifizierung des Dokumententyps</h4>
+                <p>Die KI erkennt den Typ des hochgeladenen Dokuments (Arbeitsschutzanweisung, Abnahmeprotokoll, Arbeitszeiterfassungskarte, Dienstreiseanordnung, Fahrzeugreparaturkarte, Serviceauftrag) und ordnet es einer Geschäftskategorie zu.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Feldextraktion mit Konfidenzwert</h4>
+                <p>Jedes erkannte Feld — vom Firmennamen und Mitarbeiternamen bis zu technischen Details und Daten — erhält einen individuellen Konfidenzwert, wodurch sich speicherfertige Daten von solchen unterscheiden lassen, die eine Überprüfung benötigen.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Weiterleitung an Geschäftsmodule</h4>
+                <p>Das System ordnet Felder automatisch den richtigen Bereichen zu: HR/Personal (Mitarbeiterdaten, Funktion, Bereich), Arbeitsschutz (Risikofaktoren, persönliche Schutzausrüstung (PSA), Qualifikationen), Projekte (Arbeitsumfang, Ausführungsort), Finanzen (Kosten, Fristen).</p>
+            </div>
+            <div class="feature-card">
+                <h4>Warnungen und erforderliche Überprüfung</h4>
+                <p>DocFlow AI kennzeichnet fehlende Angaben (z. B. fehlende Unterschrift eines Mitarbeiters oder der Arbeitsschutzfachkraft), potenziell veraltete Werte (z. B. altes Dokumentdatum) sowie Felder, die einer Präzisierung bedürfen — mit einem konkreten Kommentar zu jeder Warnung.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Empfohlene operative Maßnahmen</h4>
+                <p>Nach der Dokumentenanalyse schlägt das System eine Liste konkreter Schritte vor: Einholen der fehlenden Unterschrift, Überprüfung der Aktualität einer Schulung, Archivierung in der Personalakte, Prüfung der PSA-Zuteilung.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Export und ERP-Integrationen</h4>
+                <p>Export nach CSV und JSON, Integrationen in Vorbereitung mit führenden ERP-Systemen: Comarch ERP Optima und XL, Enova365, Symfonia ERP, Microsoft Dynamics 365, SAP S/4HANA, Sage 50cloud, Wapro Gang. Übertragung per Webhook / REST API.</p>
+            </div>
+        </div>
+
+        <div class="case-quote">
+            <p>„Ein Dokument, das bisher manuell in drei Systeme übertragen werden musste, wird in wenigen Sekunden klassifiziert, in Felder zerlegt und an HR, Arbeitsschutz und Projekte weitergeleitet — mit einer fertigen Liste der auszuführenden Maßnahmen."</p>
+        </div>
+
+        <h2>Was DocFlow AI erkennt</h2>
+        <p>Das System deckt das gesamte Spektrum an Betriebsdokumenten ab, die in Produktions- und Serviceunternehmen vorkommen:</p>
+        <ul>
+            <li><strong>Arbeitsschutzanweisung / Dienstleistungsauftrag / Tätigkeitsnachweis</strong> — Arbeitssicherheit, chemische, physikalische, biologische, ergonomische Faktoren; PSA (Helm, Gehörschutz, Schuhe, Handschuhe, Visiere, Schweißmaske); Arbeiten in der Höhe und in engen Räumen; elektrische Qualifikationen.</li>
+            <li><strong>Teilabnahmeprotokoll der Dokumentation</strong> — Weiterleitung an das Modul Projekte.</li>
+            <li><strong>Arbeitszeiterfassungskarte</strong> — Stunden, Arbeitstage, Mitarbeiterdaten für das HR-Modul.</li>
+            <li><strong>Dienstreiseanordnung und Reisekostenabrechnung</strong> — Daten, Routen, Kosten für das Finanzmodul.</li>
+            <li><strong>Fahrzeugreparaturkarte und Serviceauftrag</strong> — Fahrzeug, Arbeitsumfang, Teile, Arbeitszeit.</li>
+        </ul>
+
+        <h2>Systemintegrationen</h2>
+        <p>Direkter Export (CSV, JSON) ist in der Pilotphase verfügbar, native Integrationen mit ERP-Systemen sind in Vorbereitung:</p>
+        <div class="integrations-row">
+            <span class="integration-pill">Comarch ERP Optima</span>
+            <span class="integration-pill">Comarch ERP XL</span>
+            <span class="integration-pill">Enova365</span>
+            <span class="integration-pill">Symfonia ERP</span>
+            <span class="integration-pill">Microsoft Dynamics 365</span>
+            <span class="integration-pill">SAP S/4HANA</span>
+            <span class="integration-pill">Sage 50cloud</span>
+            <span class="integration-pill">Wapro Gang</span>
+        </div>
+
+        <h2>Stack und Architektur</h2>
+        <p>DocFlow AI läuft als Webanwendung, bereitgestellt auf <strong>Microsoft Azure</strong> (Azure Web Apps), mit einer <strong>Azure-SQL</strong>-Datenbank. Die Architektur basiert auf einer KI-Pipeline zur Klassifizierung und Feldextraktion, einer Regel-Schicht für das Routing von Feldern zu Geschäftsmodulen sowie einem Modul zur Empfehlung operativer Maßnahmen. Unterstützte Eingabeformate: PDF, JPG, PNG, HEIC, DOCX, TIFF.</p>
+
+        <h2>Projektstatus</h2>
+        <p>Das Projekt befindet sich aktuell in der <strong>Pilotphase</strong> — die laufende Umgebung bestätigt die zentralen Produktannahmen: automatische Klassifizierung des Dokumententyps, Feldextraktion mit Konfidenzwert, Weiterleitung der Daten an Module (HR, Arbeitsschutz, Projekte, Finanzen), Generierung von Warnungen und Vorschlägen für operative Maßnahmen. Es wird an nativen ERP-Integrationen, einem Änderungsprotokoll-Modul sowie der Erweiterung um weitere Dokumenttypen gearbeitet.</p>
+        <p>IMTO Software verantwortet das Gesamtprojekt: Systemarchitektur, Entwicklung, Integration der KI-Modelle sowie die Bereitstellung auf der Azure-Plattform.</p>
+
+        <h2>Ergebnisse (in Umsetzung)</h2>
+        <ul>
+            <li>Pilotprojekt validiert in der Microsoft-Azure-Produktionsumgebung — 94% durchschnittliche Klassifizierungskonfidenz</li>
+            <li>Unterstützung von 12 Dokumentformaten, ohne für jeden Anbieter eigene Vorlagen definieren zu müssen</li>
+            <li>Durchschnittliche Dokumentverarbeitungszeit: ~4,9 Sekunden unabhängig vom Seitenlayout</li>
+            <li>Automatische Weiterleitung erkannter Felder an 4 Geschäftsmodule (HR, Arbeitsschutz, Projekte, Finanzen)</li>
+            <li>Generierung einer Liste von Warnungen und empfohlenen operativen Maßnahmen bei jedem Dokument</li>
+            <li>CSV/JSON-Export in der Pilotphase verfügbar, native Integrationen mit 8 ERP-Systemen in Vorbereitung</li>
+        </ul>
+
+        <div class="effect-box">
+            <h3>Geschäftlicher Effekt — was das für Ihr Unternehmen bedeutet</h3>
+            <p>Das manuelle Übertragen eines einzelnen Betriebsdokuments dauert normalerweise <strong>3–5 Minuten</strong>; DocFlow AI erledigt das in <strong>~5 Sekunden</strong>. Bei einem Umfang von <strong>500 Dokumenten pro Monat</strong> sind das etwa <strong>25–40 Stunden weniger Büroarbeit pro Monat</strong> — das entspricht ungefähr einer halben Stelle, plus weniger Fehler durch manuelles Abschreiben.
+            <span class="effect-note">Beispielrechnung für eine typische KMU-Größenordnung — den genauen Effekt für Ihr Unternehmen ermitteln wir während der kostenlosen Analyse.</span></p>
+        </div>
+    </div>
+
+    <section class="case-cta-section">
+        <div class="container">
+            <span class="section-label">Möchten Sie eine ähnliche Lösung in Ihrem Unternehmen einführen?</span>
+            <h2 style="font-size:2rem;font-weight:800;margin:16px 0 20px;">Lassen Sie uns über Ihr Projekt sprechen</h2>
+            <p style="color:var(--text-muted);max-width:520px;margin:0 auto 32px;line-height:1.7;">Kostenloses 15-minütiges Gespräch – ganz unverbindlich.</p>
+            <a href="../index.html#kontakt" class="btn btn-primary">Buchen Sie jetzt Ihr kostenloses 15-minütiges Gespräch →</a>
+        </div>
+    </section>
+
+    <div class="case-nav">
+        <a href="vande.html">← Vande</a>
+        <a href="../index.html#realizacje">Alle Projekte</a>
+        <a href="deadstocks.html">Deadstocks.ai →</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column"><h4>IMTO Software</h4><p style="color:var(--text-muted);font-size:0.95rem;">AI-gestütztes Softwarehaus für KMU und produzierende Unternehmen.</p></div>
+                <div class="footer-column"><h4>Dienstleistungen</h4><ul><li><a href="../index.html#uslugi">KI-Agenten</a></li><li><a href="../index.html#uslugi">Systemintegration</a></li><li><a href="../index.html#uslugi">Maßgeschneiderte Software</a></li></ul></div>
+                <div class="footer-column"><h4>Unternehmen</h4><ul><li><a href="../o-nas.html">Über uns</a></li><li><a href="../index.html#realizacje">Projekte</a></li><li><a href="../blog/index.html">Blog</a></li></ul></div>
+                <div class="footer-column"><h4>Kontakt</h4><ul><li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li><li><a href="tel:+48500263639">+48 500 26 36 39</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><div class="footer-copyright">© 2026 IMTO Software.  ·  <a href="../polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;">Datenschutzerklärung</a></div></div>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

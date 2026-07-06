@@ -1,3 +1,9 @@
+// === KONFIGURACJA REZERWACJI SPOTKAŃ (W1) ===
+// Link do kalendarza rezerwacji (Cal.com). Gdy pole jest puste (''),
+// przyciski rezerwacji pozostają ukryte, a linki [data-booking-upgrade]
+// prowadzą do sekcji #kontakt.
+window.IMTO_BOOKING_URL = 'https://cal.com/imto-software-grzegorz-palmer/15min';
+
 // === LANGUAGE SWITCHER + DOMAIN REDIRECT ===
 (function() {
     var LANGS = {
@@ -79,6 +85,54 @@
     }
 })();
 
+// === REZERWACJA TERMINU (Cal.com / Calendly) ===
+// [data-booking-link]    — ukryty przycisk, pojawia się gdy ustawiono URL
+// [data-booking-upgrade] — link do #kontakt, podmieniany na kalendarz gdy URL ustawiony
+// Musi wykonać się PRZED smooth-scrollem i trackingiem (kolejność w tym pliku).
+(function() {
+    var url = window.IMTO_BOOKING_URL;
+    if (!url) return;
+    document.querySelectorAll('[data-booking-link], [data-booking-upgrade]').forEach(function(el) {
+        el.href = url;
+        el.target = '_blank';
+        el.rel = 'noopener';
+        el.classList.add('booking-active');
+        el.addEventListener('click', function() { imtoTrack('click_booking'); });
+    });
+})();
+
+// === PORTFOLIO: karuzela 3-kartowa, krok o 1 pełną kartę + autoplay ===
+(function() {
+    var row = document.querySelector('.case-grid.case-row');
+    var prev = document.querySelector('[data-case-row-prev]');
+    var next = document.querySelector('[data-case-row-next]');
+    if (!row || !prev || !next) return;
+    var GAP = 24;
+    var idx = 0;
+    function cardStep() {
+        var card = row.querySelector('.case-card');
+        return card ? card.getBoundingClientRect().width + GAP : 400;
+    }
+    function maxIdx() {
+        return Math.max(0, row.querySelectorAll('.case-card').length - 3);
+    }
+    function goTo(i, instant) {
+        var m = maxIdx();
+        idx = i < 0 ? m : (i > m ? 0 : i);
+        row.scrollTo({ left: Math.round(idx * cardStep()), behavior: instant ? 'auto' : 'smooth' });
+    }
+    prev.addEventListener('click', function() { goTo(idx - 1); });
+    next.addEventListener('click', function() { goTo(idx + 1); });
+    window.addEventListener('resize', function() { goTo(idx, true); });
+
+    // Autoplay co 5 s; pauza gdy kursor nad karuzelą lub karta przeglądarki nieaktywna
+    var paused = false;
+    row.addEventListener('mouseenter', function() { paused = true; });
+    row.addEventListener('mouseleave', function() { paused = false; });
+    row.addEventListener('touchstart', function() { paused = true; }, { passive: true });
+    setInterval(function() { if (!paused && !document.hidden) goTo(idx + 1); }, 5000);
+})();
+
 // === INTERSECTION OBSERVER (fade-in animations) ===
 const observerOptions = {
     threshold: 0.1,
@@ -119,7 +173,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
-        if (href === '#') return;
+        if (!href || !href.startsWith('#') || href === '#') return;
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
@@ -169,6 +223,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     prevBtn.addEventListener('click', function() { goTo(current - 1); });
     nextBtn.addEventListener('click', function() { goTo(current + 1); });
 
+    // Autoplay co 5 s (wyłącza się po dotknięciu przez użytkownika)
+    var autoplay = setInterval(function() { if (!document.hidden) goTo(current + 1); }, 5000);
+    track.addEventListener('touchstart', function() { clearInterval(autoplay); }, { passive: true });
+
     // Touch swipe
     var startX = 0;
     track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
@@ -178,12 +236,32 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }, { passive: true });
 })();
 
+// === ANALYTICS (Microsoft Clarity — ładowane WYŁĄCZNIE po zgodzie cookie / RODO) ===
+function imtoLoadAnalytics() {
+    if (window.clarity) return;
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wekaeoaefi");
+}
+
+// Zdarzenia konwersji (działa tylko gdy analityka załadowana)
+function imtoTrack(name) {
+    if (window.clarity) { try { window.clarity('event', name); } catch (e) {} }
+}
+
 // === COOKIE CONSENT ===
 (function() {
     var banner = document.getElementById('cookieBanner');
-    if (!banner) return;
 
     var consent = localStorage.getItem('imto_cookie_consent');
+    if (consent === 'accepted') {
+        imtoLoadAnalytics();
+    }
+
+    if (!banner) return;
+
     if (!consent) {
         setTimeout(function() { banner.classList.add('visible'); }, 800);
     }
@@ -191,11 +269,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     document.getElementById('cookieAccept').addEventListener('click', function() {
         localStorage.setItem('imto_cookie_consent', 'accepted');
         banner.classList.remove('visible');
+        imtoLoadAnalytics();
     });
 
     document.getElementById('cookieReject').addEventListener('click', function() {
         localStorage.setItem('imto_cookie_consent', 'rejected');
         banner.classList.remove('visible');
+    });
+})();
+
+// === CONVERSION EVENT TRACKING ===
+(function() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+        a.addEventListener('click', function() { imtoTrack('click_phone'); });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a) {
+        a.addEventListener('click', function() { imtoTrack('click_email'); });
+    });
+    document.querySelectorAll('a[href$="#kontakt"], a[href="#kontakt"]').forEach(function(a) {
+        a.addEventListener('click', function() { imtoTrack('click_cta_kontakt'); });
     });
 })();
 
@@ -239,6 +331,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         })
         .then(function(res) {
             if (res.ok) {
+                imtoTrack('form_submit_success');
                 progressDone(function() {
                     form.style.display = 'none';
                     success.style.display = 'block';

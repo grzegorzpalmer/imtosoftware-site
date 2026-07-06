@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<!-- v2 -->
+<!-- v3 — przebudowa: pakiety, podstrony usług, RODO-compliant analytics -->
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMTO Software - AI-Powered Software House</title>
-    <meta name="description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <meta name="description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 2–4 tygodnie.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="IMTO Software — AI-Powered Software House dla MŚP i produkcji">
-    <meta property="og:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <meta property="og:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 2–4 tygodnie.">
     <meta property="og:url" content="https://imtosoftware.pl/">
     <meta property="og:image" content="https://imtosoftware.pl/images/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -16,10 +16,12 @@
     <meta property="og:site_name" content="IMTO Software">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="IMTO Software — AI-Powered Software House dla MŚP i produkcji">
-    <meta name="twitter:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 4–8 tygodni.">
+    <meta name="twitter:description" content="Wdrażamy AI Agentów, integracje systemów i dedykowane oprogramowanie dla firm produkcyjnych i MŚP. Pierwsze efekty w 2–4 tygodnie.">
     <meta name="twitter:image" content="https://imtosoftware.pl/images/og-image.png">
     <link rel="canonical" href="https://imtosoftware.pl/">
-    <link rel="icon" type="image/png" href="images/logo-300x157.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +53,7 @@
           "name": "Ile kosztuje wdrożenie AI lub dedykowanego systemu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Zakresy zależą od złożoności projektu. Proste automatyzacje i agenci AI — od ok. 30 000 zł. Integracje i systemy klasy CRM/ERP/WMS — zazwyczaj 50 000–200 000 zł, rozłożone na etapy. Zawsze zaczynamy od bezpłatnej analizy — bez zobowiązań. Dopiero po niej dostaniesz konkretną wycenę z jasnym ROI."
+            "text": "Zakresy zależą od złożoności projektu. Pojedyncze automatyzacje (pakiet START) — od 8 000 zł. Agenci AI i integracje — zazwyczaj 30 000–80 000 zł. Dedykowane systemy klasy CRM/ERP/WMS — 80 000–250 000 zł, rozłożone na etapy. Zawsze zaczynamy od bezpłatnej analizy — bez zobowiązań. Dopiero po niej dostaniesz konkretną wycenę z jasnym ROI."
           }
         },
         {
@@ -86,17 +88,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/index.html">
-    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/index.html">
-    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/index.html">
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wekaeoaefi");
-    </script>
+    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/">
+    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/">
+    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/">
+    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/">
 </head>
 <body>
 
@@ -107,14 +102,26 @@
                 <img src="images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img">
             </a>
             <ul class="nav-links">
-                <li><a href="#uslugi">Usługi</a></li>
+                <li class="nav-dropdown">
+                    <a href="#uslugi">Usługi ▾</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="uslugi/ai-agenci.html">AI Agenci i chatboty</a>
+                        <a href="uslugi/integracje-power-bi.html">Integracje i Power BI</a>
+                        <a href="uslugi/dedykowane-oprogramowanie.html">Dedykowane oprogramowanie</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="uslugi/automatyzacja-start.html">Od czego zacząć: pakiet START</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="dla-produkcji.html">Dla produkcji i logistyki</a>
+                        <a href="dla-msp.html">Dla firm MŚP</a>
+                    </div>
+                </li>
+                <li><a href="#pakiety">Cennik</a></li>
                 <li><a href="#realizacje">Realizacje</a></li>
-                <li><a href="#branze">Branże</a></li>
                 <li><a href="#proces">Jak pracujemy</a></li>
                 <li><a href="o-nas.html">O nas</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
             </ul>
-            <a href="#kontakt" class="nav-cta">Umów konsultację</a>
+            <a href="#kontakt" class="nav-cta" data-booking-upgrade>Umów 15-min rozmowę</a>
             <div class="nav-lang" id="navLang">
                 <button class="nav-lang-btn" id="navLangBtn" aria-haspopup="true" aria-expanded="false">
                     <img id="navLangFlag" class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15">
@@ -134,12 +141,17 @@
     </nav>
     <div class="nav-mobile-menu" id="navMobileMenu">
         <a href="#uslugi">Usługi</a>
+        <a href="uslugi/ai-agenci.html" style="padding-left:20px;">↳ AI Agenci i chatboty</a>
+        <a href="uslugi/integracje-power-bi.html" style="padding-left:20px;">↳ Integracje i Power BI</a>
+        <a href="uslugi/dedykowane-oprogramowanie.html" style="padding-left:20px;">↳ Dedykowane oprogramowanie</a>
+        <a href="uslugi/automatyzacja-start.html" style="padding-left:20px;">↳ Od czego zacząć: pakiet START</a>
+        <a href="#pakiety">Cennik</a>
         <a href="#realizacje">Realizacje</a>
         <a href="#branze">Branże</a>
         <a href="#proces">Jak pracujemy</a>
         <a href="o-nas.html">O nas</a>
         <a href="blog/index.html">Blog</a>
-        <a href="#kontakt" class="nav-mobile-cta">Umów konsultację →</a>
+        <a href="#kontakt" class="nav-mobile-cta" data-booking-upgrade>Umów 15-min rozmowę →</a>
     </div>
 
     <!-- HERO SECTION -->
@@ -182,6 +194,18 @@
                 <path d="M -400,1100 C 0,850 300,600 600,400 S 1000,150 1400,-50 S 1600,-120 1800,-150" stroke="url(#lineGrad3)" stroke-width="5" fill="none" opacity="0.18" style="animation: flowLine4 42s linear infinite;"/>
                 <path d="M 200,1100 C 400,850 650,600 900,380 S 1200,150 1500,-30 S 1700,-100 1800,-120" stroke="url(#lineGrad1)" stroke-width="4.5" fill="none" opacity="0.15" style="animation: flowLine2 45s linear infinite;"/>
                 <path d="M -500,1000 C -100,750 200,500 500,300 S 850,100 1200,-50 S 1500,-150 1800,-200" stroke="url(#lineGrad4)" stroke-width="4" fill="none" opacity="0.12" style="animation: flowLine5 48s linear infinite;"/>
+                <path d="M -350,1020 C -50,820 200,620 420,470 S 700,270 980,120 S 1300,-40 1700,-110" stroke="url(#lineGrad1)" stroke-width="2.6" fill="none" opacity="0.7" style="animation: flowLine2 18s linear infinite;"/>
+                <path d="M 150,1060 C 350,860 550,660 760,470 S 1050,260 1350,90 S 1600,-70 1750,-90" stroke="url(#lineGrad3)" stroke-width="2.2" fill="none" opacity="0.65" style="animation: flowLine4 21s linear infinite;"/>
+                <path d="M -450,940 C -150,740 120,560 380,390 S 680,200 990,60 S 1330,-90 1700,-170" stroke="url(#lineGrad4)" stroke-width="1.9" fill="none" opacity="0.6" style="animation: flowLine1 26s linear infinite;"/>
+                <path d="M 20,1120 C 250,900 470,690 690,490 S 990,260 1290,80 S 1560,-60 1780,-110" stroke="url(#lineGrad2)" stroke-width="1.6" fill="none" opacity="0.55" style="animation: flowLine3 23s linear infinite;"/>
+                <path d="M -220,880 C 60,690 300,510 520,360 S 800,170 1120,20 S 1440,-110 1720,-160" stroke="url(#lineGrad1)" stroke-width="1.4" fill="none" opacity="0.5" style="animation: flowLine5 31s linear infinite;"/>
+                <path d="M 260,1040 C 460,840 660,640 860,450 S 1140,230 1420,70 S 1640,-70 1800,-90" stroke="url(#lineGrad3)" stroke-width="1.3" fill="none" opacity="0.5" style="animation: flowLine1 27s linear infinite;"/>
+                <path d="M -320,970 C -40,780 220,590 460,420 S 760,220 1060,60 S 1380,-90 1720,-140" stroke="url(#lineGrad2)" stroke-width="1.1" fill="none" opacity="0.45" style="animation: flowLine4 33s linear infinite;"/>
+                <path d="M 90,1090 C 300,880 520,670 740,480 S 1030,260 1330,90 S 1590,-70 1790,-120" stroke="url(#lineGrad4)" stroke-width="1" fill="none" opacity="0.4" style="animation: flowLine2 29s linear infinite;"/>
+                <path d="M -520,1080 C -160,840 160,620 480,420 S 880,170 1260,-20 S 1540,-140 1820,-190" stroke="url(#lineGrad3)" stroke-width="0.9" fill="none" opacity="0.35" style="animation: flowLine3 37s linear infinite;"/>
+                <path d="M 320,1120 C 520,880 740,650 960,450 S 1240,220 1520,60 S 1700,-60 1850,-90" stroke="url(#lineGrad1)" stroke-width="0.8" fill="none" opacity="0.35" style="animation: flowLine5 35s linear infinite;"/>
+                <path d="M -600,960 C -220,760 120,560 460,360 S 900,110 1300,-60 S 1580,-160 1850,-220" stroke="url(#lineGrad2)" stroke-width="3.2" fill="none" opacity="0.14" style="animation: flowLine1 44s linear infinite;"/>
+                <path d="M 420,1160 C 640,900 880,650 1120,430 S 1400,190 1660,30 S 1800,-70 1900,-110" stroke="url(#lineGrad4)" stroke-width="2.8" fill="none" opacity="0.12" style="animation: flowLine3 46s linear infinite;"/>
             </svg>
         </div>
         <div class="hero-content">
@@ -189,9 +213,10 @@
             <h1>Praca ręczna<br>pochłania Twój zespół?<br><span class="gold">Zmieniamy to dzięki oprogramowaniu z AI.</span></h1>
             <p class="hero-subtitle">Projektujemy dedykowane systemy i wdrażamy AI w firmach MŚP i produkcyjnych. Prowadzimy Cię za rękę — od pierwszej rozmowy po działające rozwiązanie. Bez technicznego żargonu, z mierzalnym efektem.</p>
             <div class="hero-buttons">
-                <a href="#kontakt" class="btn btn-primary">Porozmawiajmy o Twoim projekcie →</a>
+                <a href="#kontakt" class="btn btn-primary" data-booking-upgrade>Umów bezpłatną 15-min rozmowę →</a>
                 <a href="#realizacje" class="hero-link-secondary">Zobacz realizacje</a>
             </div>
+            <p class="hero-note">Bezpłatna analiza · Start od 8 000 zł · Stała wycena przed startem · Pierwsze efekty w 2–4 tygodnie</p>
         </div>
     </section>
 
@@ -232,62 +257,142 @@
         <div class="container">
             <div class="section-label">Czym się zajmujemy</div>
             <h2 class="section-heading">Gdzie Twoja firma traci czas<br>i jak to naprawiamy</h2>
+            <p class="section-lead">Cztery kompetencje — każdą dostarczamy w jednym z trzech poziomów współpracy, które znajdziesz w cenniku poniżej.</p>
             <div class="pillars-grid">
                 <div class="pillar-card animate">
                     <div class="pillar-number">01</div>
-                    <h3 class="pillar-title">AI agenci — Twój pracownik, który nie śpi</h3>
-                    <p class="pillar-description">Agent AI przetwarza Twoją skrzynkę, wyciąga zadania, terminy i priorytety — zanim zdążysz wypić kawę. Obsługuje zapytania, kategoryzuje dokumenty i raportuje bez angażowania zespołu. Pierwsze efekty po 2–4 tygodniach.<br><br><strong style="display:block;color:var(--accent);font-size:0.95rem;font-weight:700;margin-bottom:6px;">Budujemy w oparciu o <span style="font-weight:800;letter-spacing:0.02em;">NemoClaw (OpenClaw)</span> od NVIDIA oraz <span style="font-weight:800;letter-spacing:0.02em;">Claude</span> od Anthropic.</strong><br><em style="color:var(--accent);font-style:normal;font-size:0.9rem;">Przykład: 60 maili → skrót i lista zadań w 2 minuty.</em></p>
+                    <h3 class="pillar-title">AI Agenci i chatboty</h3>
+                    <span class="pillar-level">Poziomy: START i AI AGENT</span>
+                    <p class="pillar-description">Agent AI przetwarza Twoją skrzynkę, wyciąga zadania, terminy i priorytety — zanim zdążysz wypić kawę. Obsługuje zapytania, kategoryzuje dokumenty i raportuje bez angażowania zespołu. Pierwsze efekty po 2–4 tygodniach.<br><br><strong style="display:block;color:var(--accent);font-size:0.95rem;font-weight:700;margin-bottom:6px;">Budujemy w oparciu o <span style="font-weight:800;letter-spacing:0.02em;">Claude</span> od Anthropic i modele <span style="font-weight:800;letter-spacing:0.02em;">OpenAI</span> na platformie Microsoft Azure.</strong><br><em style="color:var(--accent);font-style:normal;font-size:0.9rem;">Przykład: 60 maili → skrót i lista zadań w 2 minuty.</em></p>
                     <div class="pillar-items">
                         <div class="pillar-item">Automatyczna obsługa dokumentów i maili</div>
                         <div class="pillar-item">Obsługa zapytań ofertowych 24/7</div>
                         <div class="pillar-item">Raportowanie i podsumowania bez udziału człowieka</div>
                     </div>
+                    <a href="uslugi/ai-agenci.html" class="case-link" style="margin-top:24px;display:inline-flex;">Zobacz szczegóły usługi →</a>
                 </div>
                 <div class="pillar-card animate">
                     <div class="pillar-number">02</div>
-                    <h3 class="pillar-title">Integracja systemów i raportowanie</h3>
+                    <h3 class="pillar-title">Integracje i Power BI</h3>
+                    <span class="pillar-level">Poziom: AI AGENT / INTEGRACJA</span>
                     <p class="pillar-description">Łączymy Twój <strong>ERP</strong>, <strong>CRM</strong>, magazyn i inne narzędzia w jeden działający ekosystem. Budujemy dashboardy <strong>Power BI</strong>, które dają Ci pełną widoczność biznesu w czasie rzeczywistym — bez arkuszy Excel i ręcznego zbierania danych.</p>
                     <div class="pillar-items">
                         <div class="pillar-item">Połączenie ERP, CRM i magazynu</div>
                         <div class="pillar-item">Raporty i dashboardy Power BI</div>
                         <div class="pillar-item">Automatyczne przepływy danych <strong>B2B/API</strong></div>
                     </div>
+                    <a href="uslugi/integracje-power-bi.html" class="case-link" style="margin-top:24px;display:inline-flex;">Zobacz szczegóły usługi →</a>
                 </div>
                 <div class="pillar-card animate">
                     <div class="pillar-number">03</div>
                     <h3 class="pillar-title">Dedykowane oprogramowanie</h3>
+                    <span class="pillar-level">Poziom: SYSTEM</span>
                     <p class="pillar-description">Kiedy gotowe rozwiązania nie wystarczają — tworzymy systemy szyte na miarę Twojego biznesu. Panele zarządcze, aplikacje produkcyjne, portale klienta — z AI wbudowanym od podstaw.</p>
                     <div class="pillar-items">
                         <div class="pillar-item">Systemy zarządzania produkcją</div>
                         <div class="pillar-item">Platformy B2B i portale klienta</div>
                         <div class="pillar-item">Dashboardy z analityką i predykcją AI</div>
                     </div>
+                    <a href="uslugi/dedykowane-oprogramowanie.html" class="case-link" style="margin-top:24px;display:inline-flex;">Zobacz szczegóły usługi →</a>
                 </div>
                 <div class="pillar-card animate">
                     <div class="pillar-number">04</div>
-                    <h3 class="pillar-title">Wsparcie i partnerstwo</h3>
+                    <h3 class="pillar-title">Opieka po wdrożeniu</h3>
+                    <span class="pillar-level">Abonament od 1 500 zł/mc</span>
                     <p class="pillar-description">Nie znikamy po wdrożeniu. Zostajemy z Tobą jako partner technologiczny: rozwijamy system, szkolimy zespół, monitorujemy działanie i reagujemy na problemy, zanim Ty je zauważysz.</p>
                     <div class="pillar-items">
                         <div class="pillar-item">Dedykowany opiekun projektu</div>
                         <div class="pillar-item">Szkolenia dla całego zespołu</div>
                         <div class="pillar-item">Monitoring i utrzymanie 24/7</div>
                     </div>
+                    <a href="#kontakt" class="case-link" style="margin-top:24px;display:inline-flex;">Zapytaj o OPIEKĘ →</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PAKIETY / CENNIK -->
+    <section class="section" id="pakiety">
+        <div class="container">
+            <div class="section-label">Od czego zacząć</div>
+            <h2 class="section-heading">Trzy poziomy współpracy —<br>zaczynasz małym krokiem,<br>skalujesz gdy widzisz efekt</h2>
+            <div class="tiers-grid">
+                <div class="tier-card tier-featured animate">
+                    <div class="tier-badge">Najczęstszy pierwszy krok</div>
+                    <div class="tier-name">Start</div>
+                    <h3 class="tier-title">Pojedyncza automatyzacja</h3>
+                    <p class="tier-desc">Jeden proces, który dziś pochłania najwięcej ręcznej pracy — np. przepisywanie faktur, obsługa skrzynki czy standardowych zapytań. Mierzalny efekt w kilka tygodni, minimalne ryzyko.</p>
+                    <div class="tier-price">od 8 000 zł <span>netto, stała wycena przed startem</span></div>
+                    <div class="tier-meta">
+                        <span class="tier-chip">2–3 tygodnie</span>
+                        <span class="tier-chip">1 proces</span>
+                    </div>
+                    <div class="pillar-items tier-items">
+                        <div class="pillar-item">OCR faktur i dokumentów → dane w Twoim systemie</div>
+                        <div class="pillar-item">Agent skrzynki: maile → zadania i odpowiedzi</div>
+                        <div class="pillar-item">Chatbot z wiedzą o Twojej firmie</div>
+                        <div class="pillar-item">Automatyzacje spinające narzędzia, które już masz</div>
+                    </div>
+                    <div class="tier-cta"><a href="uslugi/automatyzacja-start.html" class="btn btn-primary">Poznaj pakiet START →</a></div>
+                </div>
+                <div class="tier-card animate">
+                    <div class="tier-name">AI Agent / Integracja</div>
+                    <h3 class="tier-title">Proces od początku do końca</h3>
+                    <p class="tier-desc">Agent AI wpięty w cały proces — od zapytania klienta po ofertę, od zamówienia po raport. Łączymy ERP, CRM i magazyn, dokładamy dashboardy Power BI.</p>
+                    <div class="tier-price">30–80 tys. zł <span>netto, rozłożone na etapy</span></div>
+                    <div class="tier-meta">
+                        <span class="tier-chip">4–8 tygodni</span>
+                        <span class="tier-chip">Efekty co 2 tyg.</span>
+                    </div>
+                    <div class="pillar-items tier-items">
+                        <div class="pillar-item">Agent ofertowania i obsługi zamówień</div>
+                        <div class="pillar-item">Integracja ERP / CRM / WMS</div>
+                        <div class="pillar-item">Raportowanie Power BI w czasie rzeczywistym</div>
+                        <div class="pillar-item">Copilot wiedzy firmowej (SOP, dokumentacja)</div>
+                    </div>
+                    <div class="tier-cta"><a href="#kontakt" class="btn btn-outline">Umów bezpłatną analizę →</a></div>
+                </div>
+                <div class="tier-card animate">
+                    <div class="tier-name">System</div>
+                    <h3 class="tier-title">Dedykowane oprogramowanie</h3>
+                    <p class="tier-desc">Kiedy gotowe rozwiązania nie wystarczają — budujemy system szyty na miarę: CRM/ERP/WMS, portale B2B, aplikacje produkcyjne z AI od podstaw.</p>
+                    <div class="tier-price">80–250 tys. zł <span>netto, etapami — płacisz za działające moduły</span></div>
+                    <div class="tier-meta">
+                        <span class="tier-chip">3–6 miesięcy</span>
+                        <span class="tier-chip">Pilotaż najszybciej jak się da</span>
+                    </div>
+                    <div class="pillar-items tier-items">
+                        <div class="pillar-item">Systemy zarządzania produkcją i magazynem</div>
+                        <div class="pillar-item">Planowanie, harmonogramowanie, IoT</div>
+                        <div class="pillar-item">Platformy B2B i portale klienta</div>
+                        <div class="pillar-item">Analityka i predykcja AI</div>
+                    </div>
+                    <div class="tier-cta"><a href="uslugi/dedykowane-oprogramowanie.html" class="btn btn-outline">Zobacz możliwości →</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- CASE STUDIES -->
     <section class="section case-studies" id="realizacje">
         <div class="container">
             <div class="section-label">Realizacje</div>
             <h2 class="section-heading" style="font-size:clamp(1.7rem,3vw,2.6rem)">Firmy, które przestały tracić czas<br>i zaczęły rosnąć szybciej</h2>
-            <div class="case-grid">
+            <div class="case-grid case-row">
+                <div class="case-card animate">
+                    <a href="realizacje/docflow.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/docflow.png" alt="DocFlow AI — ekstrakcja i klasyfikacja dokumentów operacyjnych" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">AI · OCR / NLP · Obieg dokumentów · Azure <span style="background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.4);color:var(--accent);font-size:0.65rem;font-weight:700;padding:1px 7px;border-radius:8px;margin-left:4px;">Pilotaż</span></div>
+                        <h3 class="case-headline">DocFlow AI — ekstrakcja i klasyfikacja dokumentów operacyjnych</h3>
+                        <p class="case-description">System AI, który czyta protokoły BHP, karty pracy, protokoły odbioru i zlecenia serwisowe — klasyfikuje typ, wyciąga pola i kieruje dane do modułów HR, BHP, Projekty i Finanse.</p>
+                        <div class="case-effect">Efekt: 25–40 godzin pracy biurowej mniej miesięcznie</div>
+                        <a href="realizacje/docflow.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
                 <div class="case-card animate">
                     <a href="realizacje/vande.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/vande.png" alt="Vande — analiza i porównywanie ofert" style="width:100%;height:auto;display:block;"></div></a>
                     <div class="case-content">
-                        <div class="case-tag">AI · Analiza dokumentów · Oferty · Azure <span style="background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.4);color:var(--accent);font-size:0.65rem;font-weight:700;padding:1px 7px;border-radius:8px;margin-left:4px;">MVP</span></div>
+                        <div class="case-tag">AI · Analiza dokumentów · Oferty · Azure <span style="background:rgba(201,168,76,0.2);border:1px solid rgba(201,168,76,0.4);color:var(--accent);font-size:0.65rem;font-weight:700;padding:1px 7px;border-radius:8px;margin-left:4px;">Pilotaż</span></div>
                         <h3 class="case-headline">Vande — inteligentna analiza i porównywanie ofert</h3>
                         <p class="case-description">System AI do analizy ofert o nieznanej strukturze i formacie. Porównywanie wielu ofert, scoring z wagami parametrów, wsparcie negocjacji i pełny proces decyzyjny.</p>
                         <a href="realizacje/vande.html" class="case-link">Zobacz projekt →</a>
@@ -325,7 +430,8 @@
                     <div class="case-content">
                         <div class="case-tag">Produkcja tekstylna · 150 maszyn</div>
                         <h3 class="case-headline">SKI19 — system dla przemysłu tekstylnego</h3>
-                        <p class="case-description">CRM + ERP + WMS z integracją danych z ponad 150 maszyn tekstylnych. Pierwsze MVP gotowe w 4 miesiące.</p>
+                        <p class="case-description">CRM + ERP + WMS z integracją danych z ponad 150 maszyn tekstylnych. Pierwszy działający system w 4 miesiące.</p>
+                        <div class="case-effect">Efekt: koniec 2–3 godzin dziennego raportowania ręcznego</div>
                         <a href="realizacje/ski19.html" class="case-link">Zobacz projekt →</a>
                     </div>
                 </div>
@@ -335,6 +441,7 @@
                         <div class="case-tag">Produkcja · Raportowanie Power BI</div>
                         <h3 class="case-headline">CRM + ERP + WMS z analityką w czasie rzeczywistym</h3>
                         <p class="case-description">System sprzedaży i produkcji w branży tekstylnej. Moduł Power BI zapewnia analizę danych produkcyjnych w czasie rzeczywistym.</p>
+                        <div class="case-effect">Efekt: sprzedaż, produkcja i magazyn na żywo — bez sklejania raportów</div>
                         <a href="realizacje/alphatex.html" class="case-link">Zobacz projekt →</a>
                     </div>
                 </div>
@@ -347,13 +454,73 @@
                         <a href="realizacje/omde.html" class="case-link">Zobacz projekt →</a>
                     </div>
                 </div>
+                <div class="case-card animate">
+                    <a href="realizacje/nda-dokumenty.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/nda2.png" alt="Rozpoznawanie dokumentów AI" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">AI · OCR / NLP</div>
+                        <h3 class="case-headline">Rozpoznawanie i klasyfikacja dokumentów (NDA)</h3>
+                        <p class="case-description">Moduł AI do automatycznej klasyfikacji paszportów, praw jazdy i dowodów osobistych z ekstrakcją danych.</p>
+                        <a href="realizacje/nda-dokumenty.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/vitra.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/vitra.png" alt="Vitra — salony łazienkowe UK" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Retail · Wielka Brytania · 300 salonów</div>
+                        <h3 class="case-headline">Vitra — system dla przedstawicieli handlowych UK</h3>
+                        <p class="case-description">Dedykowane narzędzie dla Digital Trading LTD do obsługi sieci blisko 300 salonów łazienkowych w UK.</p>
+                        <a href="realizacje/vitra.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/mobel.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/meble.png" alt="Möbel — kreator mebli 2D" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">e-Commerce · Konfigurator 2D · NDA</div>
+                        <h3 class="case-headline">Möbel — intuicyjny kreator mebli 2D</h3>
+                        <p class="case-description">Konfigurator mebli 2D dla klienta końcowego z szeroką konfiguracją, podglądem real-time i wyceną w locie.</p>
+                        <a href="realizacje/mobel.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/workhelper.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/workhelper.png" alt="WorkHelper — aplikacja mobilna" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Aplikacja mobilna · Android</div>
+                        <h3 class="case-headline">WorkHelper — organizacja pracy zespołów terenowych</h3>
+                        <p class="case-description">Aplikacja Android dla GB Grupa Energia: rejestracja czasu pracy, zarządzanie lokalizacjami i eksport do Excela.</p>
+                        <a href="realizacje/workhelper.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/medicom.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/medicom.png" alt="Administrator Medicom — Medinet S.A." style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">Medycyna · Moduł administracyjny</div>
+                        <h3 class="case-headline">Administrator Medicom — Medinet S.A.</h3>
+                        <p class="case-description">Moduł do zarządzania procedurami medycznymi i parametrami aplikacji Medicom dla placówek służby zdrowia.</p>
+                        <a href="realizacje/medicom.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
+                <div class="case-card animate">
+                    <a href="realizacje/rspr.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/rspr.png" alt="RSPR — Pogotowie Ratunkowe" style="width:100%;height:auto;display:block;"></div></a>
+                    <div class="case-content">
+                        <div class="case-tag">e-usługi publiczne · Służba zdrowia</div>
+                        <h3 class="case-headline">Radomska Stacja Pogotowia Ratunkowego</h3>
+                        <p class="case-description">Wdrożenie e-usług w Radomskiej Stacji Pogotowia — analiza, projekt, wdrożenie, szkolenia i odbiór.</p>
+                        <a href="realizacje/rspr.html" class="case-link">Zobacz projekt →</a>
+                    </div>
+                </div>
 
+            </div>
+
+            <div class="case-row-nav">
+                <button class="case-row-btn" data-case-row-prev aria-label="Poprzednie projekty">←</button>
+                <button class="case-row-btn" data-case-row-next aria-label="Następne projekty">→</button>
             </div>
 
             <!-- MOBILE CAROUSEL -->
             <div class="case-carousel-wrap" id="caseCarousel">
                 <div class="case-carousel-viewport">
                     <div class="case-carousel-track" id="caseTrack">
+                        <div class="case-card"><a href="realizacje/docflow.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/docflow.png" alt="DocFlow AI" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · OCR / NLP · Obieg dokumentów · Azure</div><h3 class="case-headline">DocFlow AI — ekstrakcja i klasyfikacja dokumentów</h3><p class="case-description">AI klasyfikuje dokumenty BHP, HR i operacyjne, wyciąga pola i kieruje je do właściwych modułów.</p><a href="realizacje/docflow.html" class="case-link">Zobacz projekt →</a></div></div>
                         <div class="case-card"><a href="realizacje/vande.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/vande.png" alt="Vande" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · Analiza ofert · Azure</div><h3 class="case-headline">Vande — analiza i porównywanie ofert</h3><p class="case-description">AI analizuje oferty o dowolnej strukturze, porównuje je i tworzy scoring z wagami parametrów.</p><a href="realizacje/vande.html" class="case-link">Zobacz projekt →</a></div></div>
                         <div class="case-card"><a href="realizacje/deadstocks.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/ds.png" alt="Deadstocks.ai" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · B2B · ERP · SaaS</div><h3 class="case-headline">Deadstocks.ai — platforma likwidacji nadwyżek</h3><p class="case-description">AI automatycznie listuje, wycenia i sprzedaje zalegający towar z systemów ERP.</p><a href="realizacje/deadstocks.html" class="case-link">Zobacz projekt →</a></div></div>
                         <div class="case-card"><a href="realizacje/snapclick.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/snapclick.png" alt="Snapclick AI" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · Fotografia produktowa</div><h3 class="case-headline">Snapclick AI — zdjęcia produktowe z AI</h3><p class="case-description">Narzędzie AI do generowania profesjonalnych zdjęć produktowych.</p><a href="realizacje/snapclick.html" class="case-link">Zobacz projekt →</a></div></div>
@@ -361,6 +528,12 @@
                         <div class="case-card"><a href="realizacje/ski19.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/sawa.png" alt="SAWA" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Produkcja tekstylna · 150 maszyn</div><h3 class="case-headline">SKI19 — system dla przemysłu tekstylnego</h3><p class="case-description">CRM + ERP + WMS z integracją danych z ponad 150 maszyn tekstylnych.</p><a href="realizacje/ski19.html" class="case-link">Zobacz projekt →</a></div></div>
                         <div class="case-card"><a href="realizacje/alphatex.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/alphatex.png" alt="Alpha Tex" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Produkcja · Raportowanie Power BI</div><h3 class="case-headline">CRM + ERP + WMS z analityką w czasie rzeczywistym</h3><p class="case-description">System sprzedaży i produkcji z modułem Power BI.</p><a href="realizacje/alphatex.html" class="case-link">Zobacz projekt →</a></div></div>
                         <div class="case-card"><a href="realizacje/omde.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/omde.png" alt="OMDE" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Retail · Planowanie instalacji</div><h3 class="case-headline">Aplikacja instalacyjna dla Media Markt i Saturn</h3><p class="case-description">System planowania terminów instalacji dla całego miasta.</p><a href="realizacje/omde.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/nda-dokumenty.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/nda2.png" alt="Rozpoznawanie dokumentów AI" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">AI · OCR / NLP</div><h3 class="case-headline">Rozpoznawanie i klasyfikacja dokumentów</h3><p class="case-description">Moduł AI klasyfikujący dokumenty tożsamości z ekstrakcją danych.</p><a href="realizacje/nda-dokumenty.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/vitra.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/vitra.png" alt="Vitra UK" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Retail · UK · 300 salonów</div><h3 class="case-headline">Vitra — system dla handlowców UK</h3><p class="case-description">Narzędzie do obsługi sieci blisko 300 salonów łazienkowych w UK.</p><a href="realizacje/vitra.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/mobel.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/meble.png" alt="Möbel — kreator 2D" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">e-Commerce · Konfigurator 2D</div><h3 class="case-headline">Möbel — kreator mebli 2D</h3><p class="case-description">Konfigurator z podglądem real-time i wyceną w locie.</p><a href="realizacje/mobel.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/workhelper.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/workhelper.png" alt="WorkHelper" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Aplikacja mobilna · Android</div><h3 class="case-headline">WorkHelper — zespoły terenowe</h3><p class="case-description">Rejestracja czasu pracy i zarządzanie lokalizacjami dla GB Grupa Energia.</p><a href="realizacje/workhelper.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/medicom.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/medicom.png" alt="Medicom" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">Medycyna</div><h3 class="case-headline">Administrator Medicom — Medinet S.A.</h3><p class="case-description">Moduł zarządzania procedurami medycznymi aplikacji Medicom.</p><a href="realizacje/medicom.html" class="case-link">Zobacz projekt →</a></div></div>
+                        <div class="case-card"><a href="realizacje/rspr.html" class="case-image-link"><div class="case-image"><img loading="lazy" src="images/rspr.png" alt="RSPR" style="width:100%;height:auto;display:block;"></div></a><div class="case-content"><div class="case-tag">e-usługi publiczne</div><h3 class="case-headline">Radomska Stacja Pogotowia Ratunkowego</h3><p class="case-description">Wdrożenie e-usług: analiza, projekt, wdrożenie, szkolenia.</p><a href="realizacje/rspr.html" class="case-link">Zobacz projekt →</a></div></div>
                     </div>
                 </div>
                 <div class="case-carousel-nav">
@@ -424,8 +597,8 @@
                     <div class="metric-label">lat budowania systemów dla MŚP i firm produkcyjnych</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-number">100%</div>
-                    <div class="metric-label">projektów oddanych w terminie — sprawdź nasze realizacje</div>
+                    <div class="metric-number">4 mies.</div>
+                    <div class="metric-label">od startu do działającego systemu integrującego dane ze 150 maszyn produkcyjnych</div>
                 </div>
             </div>
         </div>
@@ -493,7 +666,7 @@
                         <img loading="lazy" src="https://images.weserv.nl/?url=aluterr.de/wp-content/uploads/2025/11/Aluterr-Profilsystem-Hersteller-logo-1.png&h=52&fit=contain" alt="Aluterr GmbH">
                     </div>
                     <p class="testimonial-quote">Dokładna analiza, komunikacja w przystępnym, nietechnicznym języku i skupienie się na rzeczywistych potrzebach umożliwiły stworzenie oprogramowania, które naprawdę wspiera naszą firmę w codziennej pracy.</p>
-                    <div class="testimonial-author-name">S. Hołda</div>
+                    <div class="testimonial-author-name">Szczepan Hołda</div>
                     <div class="testimonial-author-role">Właściciel, Aluterr GmbH</div>
                     <div class="testimonial-project">System CRM/ERP/WMS</div>
                 </div>
@@ -503,7 +676,7 @@
                         <img loading="lazy" src="https://images.weserv.nl/?url=www.digitaltrading.co.uk/Portals/Digital-Trading-2019/logo.png&h=52&fit=contain" alt="Digital Trading LTD">
                     </div>
                     <p class="testimonial-quote">Wiedza reprezentowana jest na bardzo wysokim poziomie, firma wyróżnia się również pod względem wdrażania nowoczesnych rozwiązań, które ułatwiają integrację różnych obszarów działalności firmy.</p>
-                    <div class="testimonial-author-name">B. Janaszek</div>
+                    <div class="testimonial-author-name">Bart Janaszek</div>
                     <div class="testimonial-author-role">Dyrektor, Digital Trading LTD</div>
                     <div class="testimonial-project">Projekt SUSWAT i Vitra</div>
                 </div>
@@ -513,7 +686,7 @@
                         <span class="testimonial-author-logo-text">OMDE</span>
                     </div>
                     <p class="testimonial-quote">Warto podkreślić, że oprócz szybkiej reakcji na zapotrzebowanie, firma sama aktywnie proponuje rozwiązania, które usprawniają pracę systemu lub obsługujących go osób.</p>
-                    <div class="testimonial-author-name">J. Skrzynecki</div>
+                    <div class="testimonial-author-name">Jacek Skrzynecki</div>
                     <div class="testimonial-author-role">Właściciel, OMDE sp. z o.o.</div>
                     <div class="testimonial-project">Aplikacja instalacyjna Media Markt</div>
                 </div>
@@ -537,7 +710,7 @@
                 <details class="faq-item">
                     <summary class="faq-summary">Ile kosztuje wdrożenie AI lub dedykowanego systemu?</summary>
                     <div class="faq-content">
-                        Zakresy zależą od złożoności projektu. Proste automatyzacje i agenci AI — od ok. 30 000 zł. Integracje i systemy klasy CRM/ERP/WMS — zazwyczaj 50 000–200 000 zł, rozłożone na etapy, żebyś nie płacił wszystkiego z góry.<br><br>
+                        Zakresy zależą od złożoności projektu. Pojedyncze automatyzacje (pakiet START) — od 8 000 zł. Agenci AI i integracje systemów — zazwyczaj 30 000–80 000 zł. Dedykowane systemy klasy CRM/ERP/WMS — 80 000–250 000 zł, rozłożone na etapy, żebyś nie płacił wszystkiego z góry.<br><br>
                         Zawsze zaczynamy od bezpłatnej analizy — bez zobowiązań, bez podpisywania czegokolwiek. Dopiero po niej dostaniesz konkretną wycenę z jasnym ROI. Bez niespodzianek.
                     </div>
                 </details>
@@ -573,6 +746,14 @@
                     <span class="section-label">Kontakt</span>
                     <h2>Masz projekt w głowie?<br>Sprawdźmy to razem.</h2>
                     <p>W 15 minut pokażemy Ci — bez owijania w bawełnę i bez slajdów sprzedażowych — gdzie w Twoim procesie jest największy potencjał do automatyzacji i ile możesz na tym zyskać.</p>
+                    <div class="founder-card">
+                        <div class="founder-avatar"><img src="images/grzegorz_palmer.jpg" alt="Grzegorz Palmer — założyciel IMTO Software" onerror="this.parentElement.textContent='GP';"></div>
+                        <div class="founder-info">
+                            <strong>Porozmawiasz z Grzegorzem — założycielem IMTO</strong>
+                            <span>Nie z handlowcem. Od pierwszej rozmowy po działające wdrożenie prowadzi Cię ta sama osoba.</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary" data-booking-link>Zarezerwuj 15 minut →</a>
                     <div class="contact-details">
                         <div class="contact-detail">
                             <div class="contact-detail-icon">✉</div>
@@ -599,7 +780,7 @@
                             <div class="contact-detail-icon">◷</div>
                             <div class="contact-detail-text">
                                 <span class="contact-detail-label">Czas odpowiedzi</span>
-                                <span class="contact-detail-value">Ten sam dzień roboczy</span>
+                                <span class="contact-detail-value">Zwykle w ciągu godziny (dni robocze)</span>
                             </div>
                         </div>
                     </div>
@@ -637,12 +818,13 @@
                         <!-- Honeypot: ukryte przed ludźmi, widoczne dla botów -->
                         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="form-submit-row">
-                            <span class="form-note">Żadnych zobowiązań · Odpowiadamy tego samego dnia</span>
+                            <span class="form-note">Żadnych zobowiązań · Zwykle odpowiadamy w ciągu godziny (dni robocze)</span>
                             <button type="submit" class="btn btn-primary">Wyślij wiadomość →</button>
                         </div>
                     </form>
                     <div class="form-success" id="formSuccess">
-                        Wiadomość wysłana! Odezwiemy się tego samego dnia roboczego.
+                        <strong>Wiadomość wysłana!</strong> Zwykle odpowiadamy w ciągu godziny w dni robocze.
+                        <a href="#" data-booking-link>Nie chcesz czekać? Wybierz od razu termin rozmowy →</a>
                     </div>
                 </div>
 
@@ -661,11 +843,12 @@
                 <div class="footer-column">
                     <h4>Usługi</h4>
                     <ul>
-                        <li><a href="#uslugi">AI Agenci</a></li>
-                        <li><a href="#uslugi">Integracja Systemów</a></li>
-                        <li><a href="#uslugi">Dedykowane Oprogramowanie</a></li>
-                        <li><a href="#uslugi">Wsparcie i Partnerstwo</a></li>
-                    </ul>
+                        <li><a href="uslugi/ai-agenci.html">AI Agenci i chatboty</a></li>
+                        <li><a href="uslugi/integracje-power-bi.html">Integracje i Power BI</a></li>
+                        <li><a href="uslugi/dedykowane-oprogramowanie.html">Dedykowane oprogramowanie</a></li>
+                        <li><a href="uslugi/automatyzacja-start.html">Od czego zacząć: pakiet START</a></li>
+                        <li><a href="dla-produkcji.html">Dla produkcji i logistyki</a></li>
+                        <li><a href="dla-msp.html">Dla firm MŚP</a></li>                    </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Firma</h4>
@@ -681,18 +864,18 @@
                     <ul>
                         <li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li>
                         <li><a href="tel:+48500263639">+48 500 26 36 39</a></li>
-                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/imto-software" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-copyright">&copy; 2026 IMTO Software. Wszelkie prawa zastrzeżone. &nbsp;·&nbsp; <a href="polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">Polityka prywatności</a></div>
                 <div class="footer-languages">
-                    <a href="#" class="active">PL</a>
+                    <a href="/" class="active">PL</a>
                     <span>|</span>
-                    <a href="#">EN</a>
+                    <a href="/en/">EN</a>
                     <span>|</span>
-                    <a href="#">DE</a>
+                    <a href="/de/">DE</a>
                 </div>
             </div>
         </div>
@@ -704,7 +887,7 @@
             <span class="mobile-sticky-icon">📞</span>
             <span>Zadzwoń</span>
         </a>
-        <a href="#kontakt" class="mobile-sticky-contact">Umów bezpłatną konsultację →</a>
+        <a href="#kontakt" class="mobile-sticky-contact" data-booking-upgrade>Umów 15-min rozmowę →</a>
     </div>
 
     <!-- COOKIE CONSENT -->

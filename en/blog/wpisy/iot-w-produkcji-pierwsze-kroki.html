@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT in Manufacturing — How to Collect Machine Data Without a Big Budget | IMTO Software Blog</title>
+    <meta name="description" content="A practical, low-budget path to collecting data from production machines — what to monitor, which devices to use, and how to turn data into decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IoT in Manufacturing — How to Collect Machine Data Without a Big Budget | IMTO Software Blog">
+    <meta property="og:description" content="A practical, low-budget path to collecting data from production machines — what to monitor, which devices to use, and how to turn data into decisions.">
+    <meta property="og:url" content="https://imtosoftware.pl/en/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+    <meta property="og:image" content="https://imtosoftware.pl/images/logo-300x157.png">
+    <meta property="og:site_name" content="IMTO Software">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IoT in Manufacturing — How to Collect Machine Data Without a Big Budget | IMTO Software Blog">
+    <meta name="twitter:description" content="A practical, low-budget path to collecting data from production machines — what to monitor, which devices to use, and how to turn data into decisions.">
+    <link rel="canonical" href="https://imtosoftware.pl/en/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../../images/favicon-512.png">
+    <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .post-hero { padding: 140px 0 64px; text-align: center; position: relative; overflow: hidden; }
+        .post-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; margin: 16px 0 24px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .post-back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.9rem; text-decoration: none; margin-bottom: 32px; transition: color 0.2s; }
+        .post-back:hover { color: var(--accent); }
+        .post-meta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+        .post-meta-date { color: var(--text-muted); font-size: 0.85rem; }
+        .post-meta-tag { font-size: 0.75rem; font-weight: 600; color: var(--accent); background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .post-body { max-width: 720px; margin: 0 auto; padding: 72px 24px 80px; }
+        .post-body h2 { font-size: 1.5rem; font-weight: 700; margin: 48px 0 18px; color: var(--text-primary); }
+        .post-body p { color: var(--text-muted); line-height: 1.85; margin-bottom: 22px; font-size: 1.05rem; }
+        .post-body ul, .post-body ol { color: var(--text-muted); line-height: 1.8; padding-left: 24px; margin-bottom: 22px; }
+        .post-body ul li, .post-body ol li { margin-bottom: 10px; font-size: 1.05rem; }
+        .post-body strong { color: var(--text-primary); font-weight: 600; }
+        .post-cta { background: var(--bg-card); border: 1px solid rgba(201,168,76,0.2); border-radius: 16px; padding: 40px; text-align: center; margin: 56px 0 0; }
+        .post-cta h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+        .post-cta p { color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem; }
+    </style>
+
+    <link rel="alternate" hreflang="pl" href="https://imtosoftware.pl/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+    <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+    <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+    <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/blog/wpisy/iot-w-produkcji-pierwsze-kroki.html">
+</head>
+<body>
+    <nav class="nav"><div class="nav-inner"><a href="../../index.html" class="nav-logo"><img src="../../../images/logo-300x157.png" alt="IMTO Software" class="nav-logo-img"></a><ul class="nav-links"><li><a href="../../index.html#uslugi">Services</a></li><li><a href="../../index.html#realizacje">Projects</a></li><li><a href="../../index.html#branze">Industries</a></li><li><a href="../../index.html#proces">How We Work</a></li><li><a href="../../o-nas.html">About Us</a></li><li><a href="../index.html" style="color:var(--accent)">Blog</a></li></ul><a href="../../index.html#kontakt" class="nav-cta">Schedule a consultation</a><div class="nav-lang" id="navLang">
+                <button class="nav-lang-btn" id="navLangBtn" aria-haspopup="true" aria-expanded="false">
+                    <img id="navLangFlag" class="nav-lang-flag" src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x" alt="EN" width="20" height="15">
+                    <span id="navLangCode">EN</span>
+                    <svg class="nav-lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <div class="nav-lang-menu" id="navLangMenu">
+                    <a href="/" data-lang-link="pl" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/pl.png" srcset="https://flagcdn.com/40x30/pl.png 2x" alt="PL" width="20" height="15"> Polski</a>
+                    <a href="/de/" data-lang-link="de" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/de.png" srcset="https://flagcdn.com/40x30/de.png 2x" alt="DE" width="20" height="15"> Deutsch</a>
+                    <a href="/en/" data-lang-link="en" class="nav-lang-opt"><img class="nav-lang-flag" src="https://flagcdn.com/20x15/gb.png" srcset="https://flagcdn.com/40x30/gb.png 2x" alt="EN" width="20" height="15"> English</a>
+                </div>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+    <div class="nav-mobile-menu" id="navMobileMenu"><a href="../../index.html#realizacje">ServicesProjectsIndustriesHow</a><a href="../../index.html#proces"> we </a><a href="../../o-nas.html">workAbout </a><a href="../../index.html#kontakt" class="nav-mobile-cta">us</a><a href="../index.html">Blog</a><a href="../../index.html#kontakt" class="nav-mobile-cta">Schedule a consultation →</a></div>
+
+    <section class="post-hero">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"><div style="position:absolute;bottom:-20%;left:-15%;width:70%;height:70%;background:radial-gradient(ellipse at center,rgba(201,168,76,.07) 0%,transparent 70%);"></div></div>
+        <div class="container" style="position:relative;z-index:1;">
+            <a href="../index.html" class="post-back">← Back to the blog</a>
+            <h1>IoT in manufacturing — how to collect machine data without a big budget</h1>
+            <div class="post-meta">
+                <span class="post-meta-date">June 15, 2026</span>
+                <span class="post-meta-tag">IoT</span>
+                <span class="post-meta-tag">Manufacturing</span>
+                <span class="post-meta-tag">Data</span>
+                <span class="post-meta-tag">Automation</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="post-body">
+        <p>When you hear "IoT" or "Industry 4.0," you probably picture a massive factory, hundreds of sensors, and a budget a small company simply doesn't have. That misconception costs manufacturing companies real money — because it discourages them from taking the first, cheap step. And that first step is exactly the one with the biggest payoff.</p>
+
+        <p>IoT (the Internet of Things) is, in practice, simply <strong>collecting data from machines and automatically sending it to one place</strong> where you can see it. No walking the shop floor, no asking the shift supervisor, no copying numbers from a piece of paper into Excel. In this article we show how to start sensibly — with a few hundred euros, not a few hundred thousand.</p>
+
+        <h2>Why bother collecting data from machines at all?</h2>
+
+        <p>Picture a plant running three CNC machines. The owner senses that "something's causing downtime" but doesn't know exactly how much. After connecting a simple counter, it turns out the machines are actually running only <strong>58% of the shift</strong> — the rest is changeovers, waiting for material, and micro-stoppages nobody had ever counted. Only that data made it possible to talk in specifics instead of impressions.</p>
+
+        <p>The most common things worth monitoring at the start:</p>
+
+        <ul>
+            <li><strong>Machine run time</strong> — how much it's actually producing versus standing idle. This is the basis of the OEE metric (overall equipment effectiveness).</li>
+            <li><strong>Piece / cycle count</strong> — automatic counting of output instead of a manual report at the end of the shift.</li>
+            <li><strong>Downtime and its causes</strong> — when a machine stops and why (breakdown, missing material, changeover).</li>
+            <li><strong>Process parameters</strong> — temperature, pressure, vibration, if they affect product quality.</li>
+        </ul>
+
+        <h2>How to do it without a big budget</h2>
+
+        <p>The key is to start with <strong>one machine and one question</strong> you want an answer to — not with digitizing the whole plant at once. Here's a sensible path:</p>
+
+        <ol>
+            <li><strong>Check what the machine is already "telling" you.</strong> Many newer devices have ports (e.g., Modbus, OPC UA) or simple signal outputs. Sometimes the data is right there — you just have to read it.</li>
+            <li><strong>For older machines — a cheap external sensor.</strong> A current sensor, a vibration sensor, or even a basic proximity sensor counting movement can deliver 80% of the insight you need for a few hundred euros per station.</li>
+            <li><strong>A small computer as a "go-between."</strong> A device the size of a matchbox (e.g., a Raspberry Pi–class board or an industrial controller) collects the signals and sends them to the cloud or a local server.</li>
+            <li><strong>A simple dashboard.</strong> The data lands on a screen you can check from your phone or computer — no need to log into the machine itself.</li>
+        </ol>
+
+        <p>A pilot on one or two machines usually comes in at <strong>a few thousand euros</strong> and a few weeks of work. That's a cost comparable to a single extended downtime event that the data would let you avoid.</p>
+
+        <h2>From data to decisions — because numbers alone aren't enough</h2>
+
+        <p>Collecting the data is only half the job. The other half is <strong>turning numbers into decisions</strong>. A dashboard full of charts that nobody looks at is worth about as much as a binder full of paper. That's why, from the start, it's worth asking: "what will we do differently once we see this number?"</p>
+
+        <p>Examples of real results at smaller manufacturers:</p>
+
+        <ul>
+            <li><strong>A downtime alert</strong> sent to the shift manager's phone when a machine stands idle for more than 10 minutes — a reaction within minutes instead of after the shift ends.</li>
+            <li><strong>An automatic production report</strong> in the inbox every morning, instead of chasing shift supervisors for data.</li>
+            <li><strong>Detecting a creeping failure</strong> — rising motor vibration signals a fault before the machine actually breaks down.</li>
+        </ul>
+
+        <p>This is exactly where automation — and, increasingly, AI — comes in: the system doesn't just display data, it flags what's unusual on its own and suggests where to look for savings.</p>
+
+        <h2>What to avoid at the start</h2>
+
+        <p>The most common mistakes we see in companies starting their IoT journey are easy to avoid. Don't buy a <strong>comprehensive "do everything" system</strong> before checking whether you'll even look at the data. Don't connect <strong>twenty machines at once</strong> — with just one, you'll learn more, and more cheaply. And don't leave the project without an owner: someone in the company has to be responsible for making sure the data actually changes decisions, not just looks nice on a screen.</p>
+
+        <p>IoT in manufacturing isn't a luxury reserved for corporations. Today it's one of the cheapest tools a small company has to regain control over what's happening on the shop floor — as long as you start with one small, concrete question.</p>
+
+        <div class="post-cta">
+            <h3>Want to implement this in your company?</h3>
+            <p>Free 15-minute consultation — no obligation. We'll tell you where the greatest potential lies in your business.</p>
+            <a href="../../index.html#kontakt" class="btn btn-primary">Book a free 15-minute session →</a>
+        </div>
+    </div>
+
+    <footer><div class="container"><div class="footer-content"><div class="footer-column"><h4>IMTO Software</h4><p style="color:var(--text-muted);font-size:.95rem;">AI-Powered Software House for SMEs and manufacturing companies.</p></div><div class="footer-column"><h4>Services</h4><ul><li><a href="../../index.html#uslugi">AI Agents</a></li><li><a href="../../index.html#uslugi">System Integration</a></li><li><a href="../../index.html#uslugi">Custom Software</a></li></ul></div><div class="footer-column"><h4>Company</h4><ul><li><a href="../../o-nas.html">About Us</a></li><li><a href="../../realizacje/index.html">Projects</a></li><li><a href="../index.html">Blog</a></li></ul></div><div class="footer-column"><h4>Contact</h4><ul><li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li><li><a href="tel:+48500263639">+48 500 26 36 39</a></li><li style="margin-top:16px;"><a href="https://www.linkedin.com/company/imto-software" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="footer-bottom"><div class="footer-copyright">© 2026 IMTO Software.  ·  <a href="../../polityka-prywatnosci.html" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a></div></div></div></footer>
+    <script src="../../../script.js"></script>
+</body>
+</html>

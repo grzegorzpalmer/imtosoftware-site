@@ -15,7 +15,9 @@
     <meta name="twitter:title" content="Blog — IMTO Software">
     <meta name="twitter:description" content="Praktyczny przewodnik po IT dla właścicieli firm. AI, automatyzacja, ERP, Power BI — bez buzzwordów.">
     <link rel="canonical" href="https://imtosoftware.pl/blog/">
-    <link rel="icon" type="image/png" href="../images/logo-300x157.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,13 +45,6 @@
     <link rel="alternate" hreflang="de" href="https://imtosoftware.pl/de/blog/index.html">
     <link rel="alternate" hreflang="en" href="https://imtosoftware.pl/en/blog/index.html">
     <link rel="alternate" hreflang="x-default" href="https://imtosoftware.pl/blog/index.html">
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "wekaeoaefi");
-    </script>
 </head>
 <body>
 
@@ -110,7 +105,31 @@
             <div class="blog-grid" id="blogGrid">
 
                 <!-- Wpisy generowane automatycznie przez Scheduler -->
-                <a href="wpisy/software-house-vs-freelancer.html" class="blog-card animate">
+                <a href="wpisy/crm-dla-msp-jak-wybrac.html" class="blog-card animate">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">1 lipca 2026</span>
+                            <span class="blog-card-tag">CRM</span>
+                        </div>
+                        <div class="blog-card-title">CRM dla MŚP — jak wybrać i czego nie kupować?</div>
+                        <div class="blog-card-desc">Porównanie podejść: gotowy SaaS, dedykowane rozwiązanie, modyfikacja open-source. Dla kogo co działa i dlaczego duże systemy często przeszkadzają małym firmom.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/iot-w-produkcji-pierwsze-kroki.html" class="blog-card">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">15 czerwca 2026</span>
+                            <span class="blog-card-tag">IoT</span>
+                        </div>
+                        <div class="blog-card-title">IoT w produkcji — jak zbierać dane z maszyn bez wielkiego budżetu?</div>
+                        <div class="blog-card-desc">Pierwsze kroki z danymi z linii produkcyjnej: co monitorować, jakie urządzenia, jak przetworzyć dane na decyzje.</div>
+                        <span class="blog-card-link">Czytaj artykuł →</span>
+                    </div>
+                </a>
+
+                <a href="wpisy/software-house-vs-freelancer.html" class="blog-card">
                     <div class="blog-card-body">
                         <div class="blog-card-meta">
                             <span class="blog-card-date">15 maja 2026</span>
@@ -276,9 +295,7 @@
                 <div class="footer-column">
                     <h4>Usługi</h4>
                     <ul>
-                        <li><a href="../index.html#uslugi">AI Agenci</a></li>
-                        <li><a href="../index.html#uslugi">Integracja Systemów</a></li>
-                        <li><a href="../index.html#uslugi">Dedykowane Oprogramowanie</a></li>
+                        <li><a href="../uslugi/automatyzacja-start.html">Pakiet START</a></li><li><a href="../uslugi/ai-agenci.html">AI Agenci i chatboty</a></li><li><a href="../uslugi/integracje-power-bi.html">Integracje i Power BI</a></li><li><a href="../uslugi/dedykowane-oprogramowanie.html">Dedykowane oprogramowanie</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -294,7 +311,7 @@
                     <ul>
                         <li><a href="mailto:biuro@imtosoftware.pl">biuro@imtosoftware.pl</a></li>
                         <li><a href="tel:+48500263639">+48 500 26 36 39</a></li>
-                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/lobo-solutions-software" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li style="margin-top: 16px;"><a href="https://www.linkedin.com/company/imto-software" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -307,4 +324,11 @@
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Informacja o plikach cookie">
         <p class="cookie-text">Używamy plików cookie, aby zapewnić prawidłowe działanie strony. <a href="../polityka-prywatnosci.html">Polityka prywatności</a></p>
         <div class="cookie-buttons">
-            <button
+            <button class="cookie-btn-reject" id="cookieReject">Tylko niezbędne</button>
+            <button class="cookie-btn-accept" id="cookieAccept">Akceptuj wszystkie</button>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
