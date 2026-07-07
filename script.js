@@ -4,6 +4,13 @@
 // prowadzą do sekcji #kontakt.
 window.IMTO_BOOKING_URL = 'https://cal.com/imto-software-grzegorz-palmer/15min';
 
+// === KONFIGURACJA CHATBOTA (ChatLab, white-label) ===
+// Wklej tutaj swój klucz (Bot ID / API Key) z panelu ChatLab:
+//   Panel > wybierz bota > zakładka "Add to Website" > "HTML Code" > "Widget".
+// Klucz to wartość z linii: window.aichatbotApiKey = "...".
+// Dopóki wartość to 'WKLEJ_KLUCZ_CHATLAB', czat NIE ładuje się (bezpieczny placeholder).
+window.IMTO_CHATLAB_KEY = 'WKLEJ_KLUCZ_CHATLAB';
+
 // === LANGUAGE SWITCHER + DOMAIN REDIRECT ===
 (function() {
     var LANGS = {
@@ -397,4 +404,26 @@ function imtoTrack(name) {
 
     window.addEventListener('scroll', updateBar, { passive: true });
     updateBar();
+})();
+
+// === LOADER WIDGETU CZATU (ChatLab, white-label) ===
+// Ładuje widget na całej stronie (PL/DE/EN), bo script.js jest dołączony
+// na każdej podstronie. Klucz konfigurujesz na górze pliku
+// (window.IMTO_CHATLAB_KEY). Loader jest odporny na brak klucza.
+(function() {
+    var key = window.IMTO_CHATLAB_KEY;
+    if (!key || key === 'WKLEJ_KLUCZ_CHATLAB') {
+        // Placeholder nieuzupełniony – nie ładujemy nic, żeby uniknąć
+        // błędnych zapytań i komunikatów w konsoli na produkcji.
+        return;
+    }
+    if (window.__imtoChatlabLoaded) return;   // zabezpieczenie przed dublem
+    window.__imtoChatlabLoaded = true;
+
+    window.aichatbotApiKey = key;
+
+    var s = document.createElement('script');
+    s.src = 'https://script.chatlab.com/aichatbot.js';
+    s.defer = true;
+    document.head.appendChild(s);
 })();

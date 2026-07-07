@@ -1736,6 +1736,79 @@ svg path {
     padding: 80px 0;
 }
 
+.about-founder {
+    background-color: var(--bg-primary);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 360px) 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.founder-photo {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.founder-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    display: block;
+}
+
+.founder-photo::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border-radius: 18px;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    z-index: -1;
+}
+
+.founder-text .section-heading {
+    margin-bottom: 4px;
+}
+
+.founder-role {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.founder-text p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 560px;
+}
+
+.founder-text .btn {
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        justify-items: center;
+        text-align: center;
+    }
+    .founder-text p {
+        text-align: left;
+    }
+    .founder-photo::before {
+        inset: -10px;
+    }
+}
+
 .about-values {
     background-color: var(--bg-primary);
 }
