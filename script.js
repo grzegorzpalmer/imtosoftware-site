@@ -9,7 +9,8 @@ window.IMTO_BOOKING_URL = 'https://cal.com/imto-software-grzegorz-palmer/15min';
 //   Panel > wybierz bota > zakładka "Add to Website" > "HTML Code" > "Widget".
 // Klucz to wartość z linii: window.aichatbotApiKey = "...".
 // Dopóki wartość to 'WKLEJ_KLUCZ_CHATLAB', czat NIE ładuje się (bezpieczny placeholder).
-window.IMTO_CHATLAB_KEY = 'WKLEJ_KLUCZ_CHATLAB';
+window.IMTO_CHATLAB_KEY = 'f5008667-0f84-4fa5-9fd4-4a904af1d53d';
+window.IMTO_CHATLAB_PROVIDER = 'f9e9c5e4-6d1a-4b8c-8d3f-3f9e9c5e46d1';
 
 // === LANGUAGE SWITCHER + DOMAIN REDIRECT ===
 (function() {
@@ -265,6 +266,7 @@ function imtoTrack(name) {
     var consent = localStorage.getItem('imto_cookie_consent');
     if (consent === 'accepted') {
         imtoLoadAnalytics();
+        imtoLoadChatbot();
     }
 
     if (!banner) return;
@@ -277,6 +279,7 @@ function imtoTrack(name) {
         localStorage.setItem('imto_cookie_consent', 'accepted');
         banner.classList.remove('visible');
         imtoLoadAnalytics();
+        imtoLoadChatbot();
     });
 
     document.getElementById('cookieReject').addEventListener('click', function() {
@@ -406,24 +409,23 @@ function imtoTrack(name) {
     updateBar();
 })();
 
-// === LOADER WIDGETU CZATU (ChatLab, white-label) ===
-// Ładuje widget na całej stronie (PL/DE/EN), bo script.js jest dołączony
-// na każdej podstronie. Klucz konfigurujesz na górze pliku
-// (window.IMTO_CHATLAB_KEY). Loader jest odporny na brak klucza.
-(function() {
+// === LOADER WIDGETU CZATU (ChatLab) — ładowany WYŁĄCZNIE po zgodzie cookie / RODO ===
+// Wywoływany z bloku COOKIE CONSENT (tak jak analityka Clarity). Klucz konfigurujesz
+// na górze pliku (window.IMTO_CHATLAB_KEY). Odporny na brak klucza i podwójne wywołanie.
+function imtoLoadChatbot() {
     var key = window.IMTO_CHATLAB_KEY;
-    if (!key || key === 'WKLEJ_KLUCZ_CHATLAB') {
-        // Placeholder nieuzupełniony – nie ładujemy nic, żeby uniknąć
-        // błędnych zapytań i komunikatów w konsoli na produkcji.
-        return;
-    }
-    if (window.__imtoChatlabLoaded) return;   // zabezpieczenie przed dublem
+    if (!key || key === 'WKLEJ_KLUCZ_CHATLAB') return;   // placeholder — nie ładuj
+    if (window.__imtoChatlabLoaded) return;              // zabezpieczenie przed dublem
     window.__imtoChatlabLoaded = true;
 
     window.aichatbotApiKey = key;
+    if (window.IMTO_CHATLAB_PROVIDER) {
+        window.aichatbotProviderId = window.IMTO_CHATLAB_PROVIDER;
+    }
 
     var s = document.createElement('script');
     s.src = 'https://script.chatlab.com/aichatbot.js';
+    s.id = key;
     s.defer = true;
     document.head.appendChild(s);
-})();
+}

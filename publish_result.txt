@@ -1,0 +1,7 @@
+=== LOG ===
+c5eceab EN/DE uslugi-ai: dodaj sekcje Chatbot i Integracje MCP (parytet z PL)
+cdcf5b7 Usun Branze z nawigacji (PL/DE/EN) + napraw menu mobilne na blogu
+f84eed2 EN/DE homepage: usun Branchen/Industries z menu (parytet z PL)
+=== STATUS ===
+?? publish_result.txt
+?? publishnow.bat
