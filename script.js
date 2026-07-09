@@ -429,3 +429,7 @@ function imtoLoadChatbot() {
     s.defer = true;
     document.head.appendChild(s);
 }
+
+// Czat ChatLab ładuje się ZAWSZE, niezależnie od zgody na cookies (decyzja właściciela).
+// (imtoLoadChatbot() bywa też wywołane w bloku COOKIE CONSENT — druga próba to no-op dzięki guardowi __imtoChatlabLoaded.)
+imtoLoadChatbot();
